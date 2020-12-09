@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500&display=swap');
 
+// devices
+$max-mobile-breakpoint: 767px;
+$max-tablet-breakpoint: 1023px;
+
 // colors
 $white: #FAFAFA;
 $light-grey: #DEDEDE;
@@ -10,3 +14,6 @@ $black: #121212;
 $main-font-family: 'Poppins', sans-serif;
 $normal-font-weight: 400;
 $bold-font-weight: 500;
+
+$navbar-height-mobile: 40px;
+$navbar-height-desktop: 50px;

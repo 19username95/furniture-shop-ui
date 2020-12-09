@@ -25,3 +25,22 @@
     }
   }
 }
+
+@media screen and (max-width: $max-mobile-breakpoint){
+  .Page404 {
+    .Page404-Container {
+      .Page404-image404 {
+        width: 50%;
+        max-width: 300px;
+      }
+
+      .Page404-Sorry {
+        font-size: 0.625em;
+      }
+
+      .Page404-HomeButton {
+        width: 100%;
+      }
+    }
+  }
+}
