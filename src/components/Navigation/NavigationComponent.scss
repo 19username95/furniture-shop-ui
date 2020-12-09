@@ -1,4 +1,4 @@
-@import "../../global/constants";
+@import "../../global/Constants";
 
 .Navigation {
   width: 100%;
@@ -36,10 +36,15 @@
           padding: 0 20px;
           text-decoration: none;
           line-height: 50px;
+          color: $black;
         }
 
         .Navigation-Link_Active {
           border-bottom: 2px solid $black;
+        }
+
+        .Navigation-Link_Active:focus {
+          color: $black;
         }
       }
     }

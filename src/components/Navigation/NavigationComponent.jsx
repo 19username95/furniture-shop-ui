@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 
 import './NavigationComponent.scss'
+import '../../global/Container.scss'
 import logo from '../../assets/images/logo.svg'
 import searchIcon from '../../assets/icons/ic_search.svg'
 import profileIcon from '../../assets/icons/ic_profile.svg'
