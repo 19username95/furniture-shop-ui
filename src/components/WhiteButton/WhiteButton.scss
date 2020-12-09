@@ -1,0 +1,16 @@
+@import "../../global/constants";
+
+.WhiteButton {
+  width: 100%;
+  min-width: 40px;
+  max-width: 260px;
+  min-height: 35px;
+  background-color: $white;
+  border: 1px solid $black;
+  font-weight: $normal-font-weight;
+  font-family: $main-font-family;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  letter-spacing: 0.01em;
+  padding: 3% 5%;
+}
