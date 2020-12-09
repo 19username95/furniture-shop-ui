@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500&display=swap');
+@import 'global/Constants';
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
+  font-family: $main-font-family;
+  font-weight: $normal-font-weight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
