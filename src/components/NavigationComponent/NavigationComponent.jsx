@@ -11,13 +11,17 @@ import Loader from '../LoaderComponent/LoaderComponent'
 import { fetchCategoriesThunk } from '../../redux/thunks/categories'
 
 function NavigationComponent({ categories, fetchCategories }) {
-    useEffect(() => fetchCategories(), [fetchCategories])
+    useEffect(() => {
+        if (!categories.length) {
+            fetchCategories()
+        }
+    }, [])
 
     if (!categories || !categories.length) {
         return <Loader />
     }
     else {
-        categories.sort((a,b) => a.menuOrder > b.menuOrder ? 1 : -1)
+        //categories.sort((a,b) => a.menuOrder > b.menuOrder ? 1 : -1)
     }
 
     return (

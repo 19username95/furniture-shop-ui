@@ -6,7 +6,11 @@ import './GoodsPage.scss'
 import { fetchProductsThunk } from "../../redux/thunks/products";
 
 function GoodsPage({ products, fetchProducts, categoryId }) {
-    useEffect(() => fetchProducts(), [fetchProducts])
+    useEffect(() => {
+        if(!products.length) {
+            fetchProducts()
+        }
+    }, [])
     if (!products || !products.length || !categoryId) {
         return <div>There is no products in this category yet</div>
     }
