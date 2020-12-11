@@ -12,18 +12,16 @@ import ExteriorCelling from "../../assets/images/temp/exterior-celling.svg"
 import FloorLamps from "../../assets/images/temp/floor-lamps.svg"
 import InteriorCelling from "../../assets/images/temp/interior-celling.svg"
 import TableLamps from "../../assets/images/temp/table-lamps.svg"
+import GoodsPage from "../GoodsPage/GoodsPage";
 
 function HomePage({ products, fetchProducts, categories, fetchCategories }) {
     useEffect(() => {
         if (!categories.length) {
             fetchCategories()
         }
-        if(!products.length) {
-            fetchProducts()
-        }
     }, [])
 
-    if (!categories || !categories.length || !products || !products.length) {
+    if (!categories || !categories.length) {
         return <Loader />
     }
 
@@ -66,14 +64,20 @@ function HomePage({ products, fetchProducts, categories, fetchCategories }) {
                     }
                 </div>
             </section>
+            <section className='ProductsView'>
+                <div className='ProductsView-SortContainer'>
+
+                </div>
+                <div className='ProductsView-AllProducts'>
+                    <GoodsPage />
+                </div>
+            </section>
         </div>
     )
 }
 
 export default connect(state => ({
-    categories: state.categories.list,
-    products: state.products.list
+    categories: state.categories.list
 }), dispatch => ({
-    fetchCategories: () => dispatch(fetchCategoriesThunk()),
-    fetchProducts: () => dispatch(fetchProductsThunk())
+    fetchCategories: () => dispatch(fetchCategoriesThunk())
 }))(HomePage)

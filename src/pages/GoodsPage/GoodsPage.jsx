@@ -11,7 +11,7 @@ function GoodsPage({ products, fetchProducts, categoryId }) {
             fetchProducts()
         }
     }, [])
-    if (!products || !products.length || !categoryId) {
+    if (!products || !products.length) {
         return <div>There is no products in this category yet</div>
     }
 
@@ -19,7 +19,7 @@ function GoodsPage({ products, fetchProducts, categoryId }) {
         <div>
             {
                 products
-                    .filter(product => product.categoryId === categoryId)
+                    .filter(product => categoryId?product.categoryId === categoryId:product)
                     .map(product =>
                         <div>
                             {product.name}
