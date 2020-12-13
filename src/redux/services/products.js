@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const fetch = async ({ sortType='newness', skip=0, limit=12 }) => {
+export const fetch = async ({ categoryId, sortType='newness', skip=0, limit=12 }) => {
     try {
         const { data: { products: allProducts } } = await axios.get('/products')
 
@@ -20,7 +20,9 @@ export const fetch = async ({ sortType='newness', skip=0, limit=12 }) => {
                 break
         }
 
-        return sortedProducts.slice(skip, limit + skip)
+        const filteredProducts = sortedProducts.filter(product => !categoryId || product.categoryId === categoryId)
+
+        return filteredProducts.slice(skip, limit + skip)
     } catch (error) {
         console.error('Fetch products error:', error)
     }

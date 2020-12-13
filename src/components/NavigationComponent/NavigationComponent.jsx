@@ -20,9 +20,6 @@ function NavigationComponent({ categories, fetchCategories }) {
     if (!categories || !categories.length) {
         return <Loader />
     }
-    else {
-        //categories.sort((a,b) => a.menuOrder > b.menuOrder ? 1 : -1)
-    }
 
     return (
     <div className='Navigation'>
@@ -36,12 +33,12 @@ function NavigationComponent({ categories, fetchCategories }) {
                 {
                     categories.map(category => (
                         <li className='Navigation-ListItem' key={category.id}>
-                            <Link className='Navigation-Link'
+                            <NavLink className='Navigation-Link'
                                      to={`/goods/${category.alias}`}
                                      activeClassName="Navigation-Link_Active"
                                      exact >
                                 {category.title}
-                            </Link>
+                            </NavLink>
                         </li>
                     ))
                 }

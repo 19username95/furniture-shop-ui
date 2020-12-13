@@ -10,10 +10,9 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
     const [sortType, setSortType] = useState('newness')
 
     useEffect(() => {
-        if(!products.length) {
-            fetchProducts({})
-        }
-    }, [])
+        fetchProducts({ categoryId })
+    }, [categoryId])
+
     if (!products || !products.length) {
         return <div>There is no products in this category yet</div>
     }
@@ -21,14 +20,14 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
     function onSort(e) {
         const type = e.target.value
         setSortType(type)
-        fetchProducts({sortType: type})
+        fetchProducts({ categoryId, sortType: type })
     }
 
     function loadMore() {
         const skip = products.length
         const limit = 12
 
-        loadMoreProducts({ sortType, skip, limit })
+        loadMoreProducts({ categoryId, sortType, skip, limit })
     }
 
     return (
@@ -44,7 +43,6 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
             <div className='Products-ProductGrid'>
                 {
                     products
-                        .filter(product => categoryId?product.categoryId === categoryId:product)
                         .map(product =>
                             <Product  className='Products-Product' product={product} />
                         )
