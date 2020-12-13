@@ -11,6 +11,7 @@ import CreateAccountComponent from "./CreateAccountComponent/CreateAccountCompon
 import ProfileComponent from "./ProfileComponent/ProfileComponent";
 import EmptyCartComponent from "./EmptyCartComponent/EmptyCartComponent"
 import CartComponent from "./CartComponent/CartComponent"
+import ProductComponent from "./ProductComponent/ProductComponent"
 
 export const Navigation = NavigationComponent
 export const WhiteButton = WhiteButtonComponent
@@ -25,4 +26,5 @@ export const CreateAccount = CreateAccountComponent
 export const Profile = ProfileComponent
 export const EmptyCart = EmptyCartComponent
 export const Cart = CartComponent
+export const Product = ProductComponent
 

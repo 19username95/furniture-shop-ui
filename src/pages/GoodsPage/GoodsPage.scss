@@ -1,0 +1,15 @@
+.Products {
+  .Products-Sort {
+
+  }
+  .Products-ProductGrid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-auto-rows: auto;
+    .Products-Product {
+
+    }
+  }
+}

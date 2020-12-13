@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 
 import './GoodsPage.scss'
 import { fetchProductsThunk } from "../../redux/thunks/products";
+import {Product} from "../../components";
 
 function GoodsPage({ products, fetchProducts, categoryId }) {
     useEffect(() => {
@@ -16,16 +17,17 @@ function GoodsPage({ products, fetchProducts, categoryId }) {
     }
 
     return (
-        <div>
-            {
-                products
-                    .filter(product => categoryId?product.categoryId === categoryId:product)
-                    .map(product =>
-                        <div>
-                            {product.name}
-                        </div>
-                    )
-            }
+        <div className='Products'>
+            <div className='Products-Sort'>Sort</div>
+            <div className='Products-ProductGrid'>
+                {
+                    products
+                        .filter(product => categoryId?product.categoryId === categoryId:product)
+                        .map(product =>
+                            <Product  className='Products-Product' product={product} />
+                        )
+                }
+            </div>
         </div>
     )
 }
