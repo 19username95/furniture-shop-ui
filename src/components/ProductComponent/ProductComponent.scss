@@ -38,11 +38,32 @@
     background: transparent;
     padding-top: 14px;
 
+
     .Product-Name {
+
     }
 
     .Product-Price {
 
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .Product{
+    font-size: 0.875em;
+    grid-template-rows: auto 25%;
+    padding: 8px;
+
+    .Product-Info {
+      padding-top: 10px;
+
+      .Product-Name {
+      }
+
+      .Product-Price {
+
+      }
     }
   }
 }

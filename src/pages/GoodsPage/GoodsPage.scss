@@ -1,15 +1,33 @@
+//@import "../../global/Container";
+@import "../../global/Constants";
+
 .Products {
   .Products-Sort {
 
   }
   .Products-ProductGrid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
     grid-auto-rows: auto;
+
     .Products-Product {
 
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .Products {
+    .Products-Sort {
+
+    }
+    .Products-ProductGrid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8px;
+      row-gap: 8px;
+      grid-auto-rows: auto;
     }
   }
 }
