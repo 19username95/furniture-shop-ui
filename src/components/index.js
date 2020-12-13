@@ -9,6 +9,8 @@ import ResetPasswordComponent from "./ResetPasswordComponent/ResetPasswordCompon
 import ResetPasswordSuccessComponent from "./ResetPasswordSuccessComponent/ResetPasswordSuccessComponent";
 import CreateAccountComponent from "./CreateAccountComponent/CreateAccountComponent"
 import ProfileComponent from "./ProfileComponent/ProfileComponent";
+import EmptyCartComponent from "./EmptyCartComponent/EmptyCartComponent"
+import CartComponent from "./CartComponent/CartComponent"
 
 export const Navigation = NavigationComponent
 export const WhiteButton = WhiteButtonComponent
@@ -21,4 +23,6 @@ export const ResetPassword = ResetPasswordComponent
 export const ResetPasswordSuccess = ResetPasswordSuccessComponent
 export const CreateAccount = CreateAccountComponent
 export const Profile = ProfileComponent
+export const EmptyCart = EmptyCartComponent
+export const Cart = CartComponent
 

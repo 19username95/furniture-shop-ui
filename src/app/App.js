@@ -16,7 +16,8 @@ import {
     Home,
     Goods,
     Login,
-    ResetPassword
+    ResetPassword,
+    Cart
 } from '../pages'
 import { store } from '../redux/store'
 
@@ -30,6 +31,7 @@ function App() {
             <Switch>
                 <Route exact path='/' component={Home}/>
                 <Route path='/goods/:category' component={Goods}/>
+                <Route path='/cart' component={Cart}/>
                 <Route path='/login' component={Login}/>
                 <Route path='/reset-password' component={ResetPassword}/>
                 <Route path='/*' component={NotFound}/>
