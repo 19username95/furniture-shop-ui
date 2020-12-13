@@ -3,18 +3,23 @@
   color: $black;
   font-size: 0.875em;
 
-  .CustomInput-Container {
-    .CustomInput-Label {
-      display: flex;
-      justify-content: space-between;
+  * {
+    box-sizing: border-box;
+  }
 
+  .CustomInput-Container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .CustomInput-Label {
       .CustomInput-LabelHint {
         color: $grey;
       }
     }
 
     .CustomInput-Link {
-        color: $black;
+      color: $black;
     }
     .CustomInput-Link:active {
         color: $black;
@@ -24,9 +29,11 @@
   .CustomInput-Field {
     font-size: 0.875em;
     border: 1px solid $grey;
-    padding: 0.5% 1%;
+    padding: 9px 12px;
     font-weight: $normal-font-weight;
     font-family: $main-font-family;
+    width: 100%;
+    margin: 6px 0;
   }
 
   .CustomInput-Field::placeholder {

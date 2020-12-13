@@ -14,7 +14,7 @@ export default function Page404() {
                 <div className='Page404-Sorry'>
                     Sorry, we can't find this page
                 </div>
-                <NavLink className='Page404-HomeButton' to="/home">
+                <NavLink className='Page404-HomeButton' to="/">
                     <WhiteButton title={'home page'}/>
                 </NavLink>
             </div>

@@ -57,7 +57,7 @@ function NavigationComponent({ categories, fetchCategories }) {
                 </li>
                 <li className='Navigation-ListItem'>
                     <NavLink className='Navigation-Link'
-                             to="/profile"
+                             to="/login"
                              activeClassName="Navigation-Link_Active"
                              exact >
                         <img src={profileIcon} alt={'Profile'}/>
