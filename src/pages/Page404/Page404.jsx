@@ -1,10 +1,10 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import './Page404.scss'
 import '../../global/Container.scss'
 import image404 from '../../assets/images/404.svg'
-import WhiteButton from "../../components/WhiteButton/WhiteButton";
+import { WhiteButton } from "../../components";
 
 export default function Page404() {
     return (
@@ -14,7 +14,7 @@ export default function Page404() {
                 <div className='Page404-Sorry'>
                     Sorry, we can't find this page
                 </div>
-                <NavLink className='Page404-HomeButton' to="/home">
+                <NavLink className='Page404-HomeButton' to="/">
                     <WhiteButton title={'home page'}/>
                 </NavLink>
             </div>

@@ -1,8 +1,8 @@
 import React from "react";
 
-import './WhiteButton.scss'
+import './WhiteButtonComponent.scss'
 
-export default function WhiteButton(props) {
+export default function WhiteButtonComponent(props) {
     return (
         <button className='WhiteButton'>{props.title}</button>
     )

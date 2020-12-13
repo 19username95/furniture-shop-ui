@@ -5,31 +5,39 @@ import {
     Route,
     Redirect
 } from 'react-router-dom';
+import { Provider } from 'react-redux'
+import axios from 'axios'
 
+import { API_URL } from '../global/constants'
 import './App.scss';
 import { Navigation } from '../components'
 import {
     NotFound,
     Home,
     Goods,
-    Login
+    Login,
+    ResetPassword,
+    Cart
 } from '../pages'
+import { store } from '../redux/store'
 
 function App() {
+  axios.defaults.baseURL = API_URL
+
   return (
-      <Router>
-        <Navigation />
-        <Switch>
-            <Route path='/home' component={Home}/>
-            <Route path='/goods/:category' component={Goods}/>
-            <Route path='/profile' component={Login}/>
-            <Route path='/404' component={NotFound}/>
-            <Route path='/*'>
-                <Redirect to='/404' />
-            </Route>
-            <Redirect from='/' to='/home'/>
-        </Switch>
-      </Router>
+      <Provider store={store}>
+          <Router>
+            <Navigation />
+            <Switch>
+                <Route exact path='/' component={Home}/>
+                <Route path='/goods/:category' component={Goods}/>
+                <Route path='/cart' component={Cart}/>
+                <Route path='/login' component={Login}/>
+                <Route path='/reset-password' component={ResetPassword}/>
+                <Route path='/*' component={NotFound}/>
+            </Switch>
+          </Router>
+      </Provider>
   );
 }
 

@@ -1,0 +1,56 @@
+@import "../../global/Constants";
+
+.HomePage {
+  .CategoriesView {
+    .CategoriesView-Container {
+      display: grid;
+      grid-auto-columns: 30% 30% 40%;
+      grid-auto-rows: 50%;
+      column-gap: 8px;
+      row-gap: 8px;
+      overflow: hidden;
+
+      .CategoriesView-Category {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        .CategoriesView-Image {
+          width: 100%;
+          transform: scale(1.1);
+        }
+
+        .CategoriesView-Title {
+          position: absolute;
+          z-index: 2;
+          padding: 25px 10px;
+          font-size: 0.875em;
+        }
+      }
+
+      .CategoriesView-Category:nth-child(4n+1) {
+        color: $white;
+        grid-row: 1;
+        grid-column: 1/3;
+      }
+      .CategoriesView-Category:nth-child(4n+2) {
+        grid-row: 1/3;
+        grid-column: 3;
+        overflow: hidden;
+
+        .CategoriesView-Image {
+          transform: scale(1.1);
+        }
+
+      }
+      .CategoriesView-Category:nth-child(4n+3) {
+        grid-row: 2;
+      }
+      .CategoriesView-Category:nth-child(4n) {
+        grid-row: 2;
+      }
+    }
+  }
+}
