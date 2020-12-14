@@ -1,10 +1,15 @@
 .Container {
   max-width: 1024px;
   margin: 0 auto;
+  padding: 1%;
+}
+
+.Container:first-child {
+  padding: 0;
 }
 
 @media screen and (max-width: 767px) {
   .Container {
-    padding: 5%
+    padding: 5%;
   }
 }

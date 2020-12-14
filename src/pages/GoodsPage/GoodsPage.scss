@@ -3,7 +3,26 @@
 
 .Products {
   .Products-Sort {
+    display: flex;
+    align-content: center;
+    padding: 1% 0;
 
+    .Products-SortTitle {
+      align-self: center;
+      padding: 3px 0;
+    }
+
+    .Products-Select{
+      border:none;
+      background-image:url('../../assets/icons/ic_arrow.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      -webkit-appearance: none;
+      padding: 0.5% 1%;
+    }
+    .Products-Select:focus {
+      outline: none;
+    }
   }
   .Products-ProductGrid {
     display: grid;

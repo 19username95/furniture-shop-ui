@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 import './GoodsPage.scss'
 import { fetchProductsThunk, loadMoreProductsThunk } from "../../redux/thunks/products";
-import {Product} from "../../components";
+import {Product, CustomSelect} from "../../components";
 
 function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
     const [sortType, setSortType] = useState('newness')
@@ -17,8 +17,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
         return <div>There is no products in this category yet</div>
     }
 
-    function onSort(e) {
-        const type = e.target.value
+    function onSort(type) {
         setSortType(type)
         fetchProducts({ categoryId, sortType: type })
     }
@@ -30,21 +29,24 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
         loadMoreProducts({ categoryId, sortType, skip, limit })
     }
 
+    const sortTypes = [
+        { title: 'Newness', value: 'newness' },
+        { title: 'Price high to low', value: 'high-to-low' },
+        { title: 'Price low to high', value: 'low-to-high' }
+    ]
+    // const sortTypes = [ 'Newness', 'Price high to low', 'Price low to high' ]
+
     return (
         <div className='Products'>
             <div className='Products-Sort'>
-                Sort by:
-                <select onChange={onSort}>
-                    <option value='newness' defaultChecked>Newness</option>
-                    <option value='high-to-low'>Price high to low</option>
-                    <option value='low-to-high'>Price low to high</option>
-                </select>
+                <span className='Products-SortTitle'>Sort by:</span>
+                <CustomSelect options={sortTypes} onChange={onSort} />
             </div>
             <div className='Products-ProductGrid'>
                 {
                     products
                         .map(product =>
-                            <Product  className='Products-Product' product={product} />
+                            <Product className='Products-Product' product={product} />
                         )
                 }
             </div>

@@ -1,0 +1,52 @@
+$width: 12em;
+$padding: 4px;
+
+.Dropdown-Container {
+  position: relative;
+  width: $width;
+  font-size: 0.875em;
+  font-weight: 400;
+  display: flex;
+
+  .Dropdown-Header {
+    width: $width;
+    background: #fafafa;
+    font-weight: 500;
+    position: absolute;
+    //top: 12%;
+    top:0;
+    left: 0;
+    padding: $padding;
+
+    .Dropdown-Arrow {
+      padding-left: 7px;
+    }
+  }
+
+  .Dropdown-ListContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: $width;
+
+    .Dropdown-List {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+      color: #121212;
+
+      &:first-child {
+      }
+
+      .Dropdown-ListItem {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: $padding;
+      }
+    }
+  }
+}
