@@ -9,15 +9,15 @@ import { fetch } from "../services/products";
 export const fetchProductsThunk = (options) => {
     return async (dispatch) => {
         dispatch(fetchProducts())
-        const products = await fetch(options)
-        dispatch(productsFetched(products))
+        const { count, products } = await fetch(options)
+        dispatch(productsFetched({ count, products }))
     }
 }
 
 export const loadMoreProductsThunk = (options) => {
     return async (dispatch) => {
         dispatch(loadMoreProducts())
-        const products = await fetch(options)
-        dispatch(moreProductsLoaded(products))
+        const { count, products } = await fetch(options)
+        dispatch(moreProductsLoaded({ count, products }))
     }
 }

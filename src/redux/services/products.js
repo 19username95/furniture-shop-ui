@@ -22,7 +22,10 @@ export const fetch = async ({ categoryId, sortType='newness', skip=0, limit=12 }
 
         const filteredProducts = sortedProducts.filter(product => !categoryId || product.categoryId === categoryId)
 
-        return filteredProducts.slice(skip, limit + skip)
+        const products = filteredProducts.slice(skip, limit + skip)
+        const count = filteredProducts.length
+
+        return { products, count }
     } catch (error) {
         console.error('Fetch products error:', error)
     }

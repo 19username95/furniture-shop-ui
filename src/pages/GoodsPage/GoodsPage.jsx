@@ -6,7 +6,7 @@ import './GoodsPage.scss'
 import { fetchProductsThunk, loadMoreProductsThunk } from "../../redux/thunks/products";
 import {Product, CustomSelect} from "../../components";
 
-function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
+function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasMore }) {
     const [sortType, setSortType] = useState('newness')
 
     useEffect(() => {
@@ -50,7 +50,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId }) {
                         )
                 }
             </div>
-            <div onClick={loadMore}>Load more</div>
+            { hasMore ? <div onClick={loadMore}>Load more</div> : null }
         </div>
     )
 }
@@ -61,6 +61,7 @@ export default withRouter(connect((state, ownProps) => {
 
     return {
         products: state.products.list,
+        hasMore: state.products.hasMore,
         categoryId: category && category.id
     }
 }, dispatch => ({
