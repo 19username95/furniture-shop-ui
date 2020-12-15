@@ -1,7 +1,10 @@
+@import "../../global/Constants";
+
 .EmptyCart {
   .EmptyCart-Container {
     max-width: 320px;
     text-align: center;
+    font-size: 0.875em;
 
     .EmptyCart-Image {
       padding-bottom: 3%;
@@ -9,5 +12,11 @@
     .EmptyCart-Text {
       padding-bottom: 11%;
     }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .EmptyCart {
+    font-size: 0.75em;
   }
 }
