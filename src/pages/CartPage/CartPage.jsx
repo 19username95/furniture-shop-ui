@@ -1,16 +1,17 @@
-import React from 'react';
+import React from 'react'
+import {connect} from "react-redux"
 import {
     Cart,
     AuthTitle,
     BlackButton
-} from "../../components";
-import {connect} from "react-redux";
+} from "../../components"
 import {
     increaseQuantity,
     reduceQuantity,
     removeItem
-} from "../../redux/actions/cart";
-import image from "../../assets/images/bulb.svg";
+} from "../../redux/actions/cart"
+import image from "../../assets/images/bulb.svg"
+import "./CartPage.scss"
 
 function CartPage ({items, removeItem, increaseQuantity, reduceQuantity}) {
     return items.length ? <Cart
@@ -22,8 +23,8 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity}) {
     : <div className='EmptyCart'>
             <AuthTitle>BASKET</AuthTitle>
             <div className='EmptyCart-Container Container'>
-                <img alt='' src={image}/>
-                <div>Your basket is empty</div>
+                <img className='EmptyCart-Image' alt='' src={image}/>
+                <div className='EmptyCart-Text'>Your basket is empty</div>
                 <BlackButton title='start shopping' link='/'/>
             </div>
     </div>

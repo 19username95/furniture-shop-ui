@@ -1,0 +1,13 @@
+.EmptyCart {
+  .EmptyCart-Container {
+    max-width: 320px;
+    text-align: center;
+
+    .EmptyCart-Image {
+      padding-bottom: 3%;
+    }
+    .EmptyCart-Text {
+      padding-bottom: 11%;
+    }
+  }
+}
