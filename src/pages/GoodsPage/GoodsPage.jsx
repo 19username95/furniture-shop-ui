@@ -35,7 +35,6 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
         { title: 'Price high to low', value: 'high-to-low' },
         { title: 'Price low to high', value: 'low-to-high' }
     ]
-    // const sortTypes = [ 'Newness', 'Price high to low', 'Price low to high' ]
 
     return (
         <div className='Products Container'>
@@ -51,7 +50,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
                         )
                 }
             </div>
-            { hasMore ? <div onClick={loadMore}>Load more</div> : null }
+            { hasMore ? <button className='Products-LoadMore' onClick={loadMore}>Show more</button> : null }
         </div>
     )
 }
