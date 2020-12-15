@@ -4,6 +4,11 @@ export const addToCart = (product) => ({
     payload: { product }
 })
 
+export const CLEAN_CART = 'CLEAN_CART'
+export const cleanCart = () => ({
+    type: CLEAN_CART
+})
+
 export const REMOVE_ITEM = 'REMOVE_ITEM'
 export const removeItem = (productId) => ({
     type: REMOVE_ITEM,

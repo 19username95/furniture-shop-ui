@@ -15,6 +15,50 @@
   }
 }
 
+.SuccessOrderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 5%;
+
+  .SuccessOrder {
+    flex-grow: 1;
+    max-width: 368px;
+    position: relative;
+    text-align: center;
+
+
+    .SuccessOrder-Container {
+      .SuccessOrder-Image {
+
+      }
+
+      .SuccessOrder-Title {
+
+      }
+
+      .SuccessOrder-Subtitle {
+
+      }
+
+      .SuccessOrder-Info {
+        .SuccessOrder-OrderNumber {
+
+        }
+
+        .SuccessOrder-OrderDate {
+
+        }
+      }
+
+      .SuccessOrder-Button {
+
+      }
+    }
+  }
+}
+
 @media screen and (max-width: $max-mobile-breakpoint) {
   .EmptyCart {
     font-size: 0.75em;

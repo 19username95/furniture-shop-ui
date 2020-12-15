@@ -5,7 +5,6 @@ import './HomePage.scss'
 import '../../global/Container.scss'
 import Loader from "../../components/LoaderComponent/LoaderComponent";
 import {fetchCategoriesThunk} from "../../redux/thunks/categories";
-import {fetchProductsThunk} from "../../redux/thunks/products";
 
 // temp images
 import ExteriorCelling from "../../assets/images/temp/exterior-celling.svg"

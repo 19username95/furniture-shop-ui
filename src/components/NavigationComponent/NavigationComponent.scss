@@ -37,6 +37,10 @@
           text-decoration: none;
           line-height: 50px;
           color: $black;
+
+          .Navigation-CartCount {
+            font-size: 0.75em;
+          }
         }
 
         .Navigation-Link_Active {

@@ -1,21 +1,27 @@
-import React, { useEffect } from 'react';
-import {Link, NavLink} from "react-router-dom";
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { NavLink } from "react-router-dom"
+import { connect } from 'react-redux'
+import Loader from '../LoaderComponent/LoaderComponent'
+import { fetchCategoriesThunk } from '../../redux/thunks/categories'
+import {CartPopUp} from "../index";
 import './NavigationComponent.scss'
 import '../../global/Container.scss'
-import logo from '../../assets/images/logo.svg'
+import logoImage from '../../assets/images/logo.svg'
 import searchIcon from '../../assets/icons/ic_search.svg'
 import profileIcon from '../../assets/icons/ic_profile.svg'
 import cartIcon from '../../assets/icons/ic_cart.svg'
-import Loader from '../LoaderComponent/LoaderComponent'
-import { fetchCategoriesThunk } from '../../redux/thunks/categories'
 
-function NavigationComponent({ categories, fetchCategories }) {
+function NavigationComponent({ categories, cartItems, fetchCategories }) {
+    const [cartItemsCount, setCartItemsCount] = useState(0)
+
     useEffect(() => {
         if (!categories.length) {
             fetchCategories()
         }
-    }, [])
+        if (cartItems.length) {
+            setCartItemsCount(cartItems.reduce((sum, item) => sum + item.count, 0))
+        }
+    }, [cartItems])
 
     if (!categories || !categories.length) {
         return <Loader />
@@ -27,7 +33,7 @@ function NavigationComponent({ categories, fetchCategories }) {
             <NavLink className='Navigation-LogoLink'
                      to="/"
                      exact >
-                <img alt='morgan' src={logo}/>
+                <img alt='morgan' src={logoImage}/>
             </NavLink>
             <ul className='Navigation-List'>
                 {
@@ -66,16 +72,21 @@ function NavigationComponent({ categories, fetchCategories }) {
                          activeClassName="Navigation-Link_Active"
                          exact >
                     <img src={cartIcon} alt={'Cart'}/>
+                    <div className='Navigation-CartCount'>
+                        {cartItemsCount ? cartItemsCount : null}
+                    </div>
                 </NavLink>
                 </li>
             </ul>
         </div>
+        <CartPopUp />
     </div>
     )
 }
 
 export default connect(state => ({
-    categories: state.categories.list
+    categories: state.categories.list,
+    cartItems: Object.values(state.cart.items)
 }), dispatch => ({
     fetchCategories: () => dispatch(fetchCategoriesThunk())
 }))(NavigationComponent)

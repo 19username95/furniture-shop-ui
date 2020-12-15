@@ -12,6 +12,7 @@ import ProfileComponent from "./ProfileComponent/ProfileComponent"
 import CartComponent from "./CartComponent/CartComponent"
 import ProductComponent from "./ProductComponent/ProductComponent"
 import CustomSelectComponent from "./CustomSelectComponent/CustomSelectComponent"
+import CartPopUpComponent from "./CartPopUpComponent/CartPopUpComponent"
 
 export const Navigation = NavigationComponent
 export const WhiteButton = WhiteButtonComponent
@@ -25,5 +26,6 @@ export const ResetPasswordSuccess = ResetPasswordSuccessComponent
 export const CreateAccount = CreateAccountComponent
 export const Profile = ProfileComponent
 export const Cart = CartComponent
+export const CartPopUp = CartPopUpComponent
 export const Product = ProductComponent
 export const CustomSelect = CustomSelectComponent
