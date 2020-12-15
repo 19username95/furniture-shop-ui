@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 
 import './GoodsPage.scss'
+import '../../global/Container.scss'
 import { fetchProductsThunk, loadMoreProductsThunk } from "../../redux/thunks/products";
 import {Product, CustomSelect} from "../../components";
 
@@ -37,7 +38,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
     // const sortTypes = [ 'Newness', 'Price high to low', 'Price low to high' ]
 
     return (
-        <div className='Products'>
+        <div className='Products Container'>
             <div className='Products-Sort'>
                 <span className='Products-SortTitle'>Sort by:</span>
                 <CustomSelect options={sortTypes} onChange={onSort} />
