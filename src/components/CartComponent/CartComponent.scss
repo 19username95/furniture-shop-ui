@@ -1,0 +1,173 @@
+@import "../../global/Constants";
+
+.CartItem {
+  .CartItem-Container {
+    display: grid;
+    grid-auto-rows: 100%;
+    grid-auto-columns: auto 2.5fr;
+    column-gap: 3%;
+    .CartItem-Image {
+      grid-row: 1;
+      grid-column: 1;
+      width: 100%;
+      height:auto;
+      max-width: 180px;
+    }
+
+    .CartItem-Main {
+      grid-row: 1;
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: 80% auto;
+      grid-template-rows: 50% auto 10%;
+      border-bottom: 1px solid $light-grey;
+
+      .CartItem-Info {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: left;
+        align-self: start;
+        font-size:  1.125em;
+
+        .CartItem-Category {
+          color: $grey;
+          font-size: 0.75em;
+        }
+      }
+
+      .CartItem-QuantitySection {
+        grid-row: 2;
+        grid-column: 1;
+        justify-self: left;
+        align-self: end;
+
+        .CartItem-QuantityLabel {
+          font-size: 0.75em;
+          color: $grey;
+          -moz-user-select: none;
+          user-select: none;
+        }
+
+        .CartItem-QuantityManager {
+          font-size: 0.875em;
+          display: grid;
+          grid-template-columns: min-content 32px min-content;
+          grid-template-rows: 32px;
+          column-gap: 8px;
+          justify-content: center;
+          align-content: center;
+
+          * {display: grid;
+            justify-content: center;
+            align-content: center;}
+
+          .CartItem-Quantity {
+            width: 100%;
+            height: 100%;
+            border: 1px solid $light-grey;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          .CartItem-IncreaseQuantity {
+            border: 1px solid $black;
+            background-color: transparent;
+          }
+
+          .CartItem-ReduceQuantity {
+            border: 1px solid $black;
+            background-color: transparent;
+          }
+
+          .CartItem-ReduceQuantity:disabled {
+            border: 1px solid transparent;
+            outline: 1px solid $light-grey;
+          }
+
+          .CartItem-IncreaseQuantity, .CartItem-ReduceQuantity:focus {
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .CartItem-Remove {
+        grid-row: 1;
+        grid-column: 2;
+        align-self: start;
+        justify-self: end;
+        padding: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+      }
+
+      .CartItem-Remove:focus {
+        outline: none;
+      }
+
+      .CartItem-Price {
+        grid-row: 2;
+        grid-column: 2;
+        align-self: end;
+        justify-self: end;
+        font-size: 1em;
+        -moz-user-select: none;
+        user-select: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .CartItem {
+    padding: 5%;
+    .CartItem-Container {
+      grid-auto-columns: auto 70%;
+
+      .CartItem-Image {
+      }
+
+      .CartItem-Main {
+        .CartItem-Info {
+          * {
+            font-size: 0.625em;
+          }
+        }
+
+        .CartItem-QuantitySection {
+          .CartItem-QuantityLabel {
+            display: none;
+          }
+
+          .CartItem-QuantityManager {
+            grid-template-columns: 22px 22px 22px;
+            grid-template-rows: 22px;
+            column-gap: 2px;
+
+            .CartItem-Quantity {
+
+            }
+
+            .CartItem-IncreaseQuantity {
+
+            }
+
+            .CartItem-ReduceQuantity {
+
+            }
+          }
+        }
+
+        .CartItem-Remove {
+          width: 20px;
+          height: 20px;
+        }
+
+        .CartItem-Price {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+}

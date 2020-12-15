@@ -12,6 +12,7 @@ import {
 } from "../../redux/actions/cart"
 import image from "../../assets/images/bulb.svg"
 import "./CartPage.scss"
+import "../../global/Container.scss"
 
 function CartPage ({items, removeItem, increaseQuantity, reduceQuantity}) {
     return items.length ? <Cart
