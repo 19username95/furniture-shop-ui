@@ -78,11 +78,13 @@
           .CartItem-ReduceQuantity {
             border: 1px solid $black;
             background-color: transparent;
+            cursor: pointer;
           }
 
           .CartItem-ReduceQuantity:disabled {
             border: 1px solid transparent;
             outline: 1px solid $light-grey;
+            cursor: auto;
           }
 
           .CartItem-IncreaseQuantity, .CartItem-ReduceQuantity:focus {
