@@ -80,7 +80,9 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
                 <div className='EmptyCart-Container'>
                     <img className='EmptyCart-Image' alt='' src={imageBulb}/>
                     <div className='EmptyCart-Text'>Your basket is empty</div>
-                    <BlackButton title='start shopping' link='/'/>
+                    <div className='EmptyCart-BlackButtonWrapper'>
+                        <BlackButton className='EmptyCart-BlackButton' title='start shopping' link='/'/>
+                    </div>
                 </div>
             </div>
 }

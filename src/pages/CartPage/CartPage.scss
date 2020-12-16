@@ -1,16 +1,24 @@
 @import "../../global/Constants";
 
 .EmptyCart {
+  margin-top: 11%;
+
   .EmptyCart-Container {
     max-width: 320px;
     text-align: center;
     font-size: 0.875em;
+    margin: 0 auto;
 
     .EmptyCart-Image {
       padding-bottom: 3%;
     }
+
     .EmptyCart-Text {
-      padding-bottom: 11%;
+      padding-bottom: 10%;
+    }
+
+    .EmptyCart-BlackButtonWrapper {
+      height: 42px;
     }
   }
 }
