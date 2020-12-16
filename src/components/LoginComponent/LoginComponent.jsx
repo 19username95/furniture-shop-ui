@@ -9,6 +9,8 @@ import {
     BlackButton,
     CustomInput
 } from "../index";
+import iconShowPassword from '../../assets/icons/ic_profile.svg'
+import iconHidePassword from '../../assets/icons/ic_arrow.svg'
 
 const regexp = {
     email: new RegExp('^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$'),
@@ -25,6 +27,7 @@ export default function LoginComponent({goToSignUp}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [errors, setErrors] = useState({})
+    const [showPassword, setShowPassword] = useState(false)
 
     const changeEmail = (e) => {
         setEmail(e.target.value)
@@ -69,6 +72,7 @@ export default function LoginComponent({goToSignUp}) {
                     />
                     <CustomInput className='LoginPage-FormInput'
                                  label='Password'
+                                 type={showPassword ? 'text' : 'password'}
                                  placeholder='Enter your password'
                                  link='/reset-password'
                                  linkText='Forgotten your password?'
@@ -79,6 +83,8 @@ export default function LoginComponent({goToSignUp}) {
                                      const result = validate('password', e.target.value)
                                      setErrors({ ...errors, password: result.message })
                                  }}
+                                 icon={showPassword ? iconHidePassword : iconShowPassword}
+                                 onIconClick={() => setShowPassword(!showPassword)}
                     />
                 </form>
                 <div>
