@@ -1,19 +1,29 @@
 @import "../../global/Constants";
 
 .Navigation {
+  top: 0;
   width: 100%;
   height: 50px;
   border-bottom: 1px solid $light-grey;
+  position: fixed;
+  background-color: $white;
+  z-index: 3;
 
   .Navigation-Container {
     width: 100%;
+    max-width: 1024px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1% 1% 1%;
 
     .Navigation-LogoLink {
       margin: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .Navigation-List {
@@ -56,5 +66,12 @@
     .Navigation-List:last-child {
       justify-content: flex-end;
     }
+  }
+
+  .Navigation-CartPopUpContainer {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1024px;
+    margin: auto;
   }
 }

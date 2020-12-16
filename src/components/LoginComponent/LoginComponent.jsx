@@ -58,8 +58,7 @@ export default function LoginComponent({goToSignUp}) {
                     <div onClick={goToSignUp}>Create an account</div>
                 </div>
                 <BlackButton title='login'
-                             link='/'
-                             onClick={() => console.log(email)} />
+                             link='/' />
             </div>
         </div>
     )

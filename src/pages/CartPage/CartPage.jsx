@@ -75,9 +75,9 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
                 reduceQuantity={reduceQuantity}
                 onSubmit={sendOrder}
             />
-            : <div className='EmptyCart'>
+            : <div className='EmptyCart Container'>
                 <AuthTitle>BASKET</AuthTitle>
-                <div className='EmptyCart-Container Container'>
+                <div className='EmptyCart-Container'>
                     <img className='EmptyCart-Image' alt='' src={imageBulb}/>
                     <div className='EmptyCart-Text'>Your basket is empty</div>
                     <BlackButton title='start shopping' link='/'/>
