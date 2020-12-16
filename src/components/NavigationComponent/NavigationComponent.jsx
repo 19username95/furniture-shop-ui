@@ -71,7 +71,9 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                  activeClassName="Navigation-Link_Active"
                                  exact >
                             <img src={cartIcon} alt={'Cart'}
-                                 onMouseEnter={() => setShowPopUp(true)} />
+                                 onMouseEnter={ cartItemsCount > 0 ?
+                                     () => setShowPopUp(true)
+                                     : null} />
                             <div className='Navigation-CartCount'>
                                 {cartItemsCount ? cartItemsCount : null}
                             </div>
