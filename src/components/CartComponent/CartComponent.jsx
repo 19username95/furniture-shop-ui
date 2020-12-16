@@ -1,25 +1,55 @@
 import React from 'react'
-import './CartComponent.scss'
-import '../../global/Container.scss'
 import {
     BlackButton,
     CartItem
 } from "../index";
+import {pricePrettifier} from "../../utils/pricePrettifier"
+import './CartComponent.scss'
+import '../../global/Container.scss'
 
 export default function CartComponent({items, removeItem, increaseQuantity, reduceQuantity, onSubmit}) {
     return (
         <div className='Cart Container'>
             <div className='Cart-FullOrder'>
                 {items.map(({ product, count }) => (
-                    <CartItem product={product}
-                              count={count}
-                              increaseQuantity={increaseQuantity}
-                              reduceQuantity={reduceQuantity}
-                              removeItem={removeItem} />
+                    <div className='Cart-Product' key={product.id}>
+                        <CartItem product={product}
+                                  count={count}
+                                  increaseQuantity={increaseQuantity}
+                                  reduceQuantity={reduceQuantity}
+                                  removeItem={removeItem} />
+                    </div>
                 ))}
             </div>
             <div className='Cart-SummaryOrder'>
-                <BlackButton title='checkout' onClick={onSubmit} />
+                <div className='Cart-SummaryContainer'>
+                    <div className='Cart-SummaryTitle'>Order Summary</div>
+                    <div className='Cart-SummaryProducts'>
+                        {items.map(({ product }) => (
+                            <div className='Cart-SummaryProduct'
+                                 key={product.id}>
+                                <div className='Cart-SummaryProductName'>
+                                    {product.name}
+                                </div>
+                                <div className='Cart-SummaryProductPrice'>
+                                    {pricePrettifier(product.price)}
+                                </div>
+                            </div>
+                        ))}
+
+                    </div>
+                    <div className='Cart-SummaryTotalContainer'>
+                        <span className='Cart-TotalTitle'>Estimated Total</span>
+                        <span className='Cart-TotalSum'>
+                            {pricePrettifier(items.reduce((sum, item) => sum + (item.product.price * item.count), 0))}
+                        </span>
+                    </div>
+                </div>
+                <div className='Cart-CheckoutButtonContainer'>
+                    <BlackButton className='Cart-CheckoutButton'
+                                 title='checkout'
+                                 onClick={onSubmit} />
+                </div>
             </div>
         </div>
     );

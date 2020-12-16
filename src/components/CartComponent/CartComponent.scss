@@ -1,15 +1,72 @@
 @import "../../global/Constants";
 .Cart {
   display: grid;
-  grid-template-columns: auto 30%;
+  grid-template-columns: auto 25%;
   grid-template-rows: 100%;
+  column-gap: 10%;
 
   .Cart-FullOrder {
+    padding: 8px;
 
+    .Cart-Product {
+      padding-bottom: 4%;
+    }
   }
 
   .Cart-SummaryOrder {
     justify-self: end;
+    width: 100%;
+    height: fit-content;
+    min-height: 180px;
+    border: 1px solid $light-grey;
+    padding: 8px;
+    display: grid;
+
+    .Cart-SummaryContainer {
+      font-size: 0.75em;
+
+      .Cart-SummaryTitle {
+        color: $grey;
+        padding-bottom: 5px ;
+      }
+
+      .Cart-SummaryProducts {
+        letter-spacing: 0.01em;
+        line-height: 183%;
+        border-bottom: 1px solid #6d6d6d1f;
+
+        .Cart-SummaryProduct {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          padding: 5px 0;
+        }
+      }
+
+      .Cart-SummaryTotalContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .Cart-TotalTitle {
+          color: $grey;
+        }
+        .Cart-TotalSum {
+          font-size: 1.17em;
+        }
+      }
+    }
+
+    .Cart-CheckoutButtonContainer {
+      height: 34px;
+      width: 100%;
+      align-self: end;
+
+      .Cart-CheckoutButton {
+
+      }
+    }
   }
 }
 @media screen and (max-width: $max-mobile-breakpoint) {
