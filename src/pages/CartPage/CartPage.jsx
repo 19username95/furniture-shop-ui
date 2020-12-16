@@ -40,9 +40,9 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
     if (orderSent) {
         return (
             <div className='SuccessOrderWrapper'>
-                <div className='SuccessOrder'>
+                <div className='SuccessOrder Container'>
                     <Title>THANK YOU!</Title>
-                    <div className='SuccessOrder-Container Container'>
+                    <div className='SuccessOrder-Container'>
                         <img className='SuccessOrder-Image' alt='' src={imageBulbOn}/>
                         <div className='SuccessOrder-Title'>
 
@@ -68,14 +68,21 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
     }
 
     return items.length ?
-            <Cart
-                items={items}
-                removeItem={removeItem}
-                increaseQuantity={increaseQuantity}
-                reduceQuantity={reduceQuantity}
-                onSubmit={sendOrder}
-            />
-            : <div className='EmptyCart Container'>
+        <div className='CartWrapper'>
+            <div className='CartContainer Container'>
+                <Title>BASKET</Title>
+                <Cart
+                    items={items}
+                    removeItem={removeItem}
+                    increaseQuantity={increaseQuantity}
+                    reduceQuantity={reduceQuantity}
+                    onSubmit={sendOrder}
+                />
+            </div>
+        </div>
+        :
+        <div className='EmptyCartWrapper'>
+            <div className='EmptyCart Container'>
                 <Title>BASKET</Title>
                 <div className='EmptyCart-Container'>
                     <img className='EmptyCart-Image'
@@ -89,6 +96,7 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
                     </div>
                 </div>
             </div>
+        </div>
 }
 
 export default connect((state) => ({

@@ -1,13 +1,22 @@
 @import "../../global/Constants";
+.EmptyCartWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
-.EmptyCart {
-  margin-top: 11%;
+  .EmptyCart {
+    flex-grow: 1;
+    max-width: 368px;
+    position: relative;
+    text-align: center;
+  }
 
   .EmptyCart-Container {
-    max-width: 320px;
+    //max-width: 320px;
     text-align: center;
     font-size: 0.875em;
-    margin: 0 auto;
+    //margin: 0 auto;
 
     .EmptyCart-Image {
       padding-bottom: 3%;
@@ -28,7 +37,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 5%;
 
   .SuccessOrder {
     flex-grow: 1;
@@ -64,6 +72,15 @@
 
       }
     }
+  }
+}
+
+.CartWrapper {
+  display: flex;
+  width: 100%;
+  .CartContainer {
+    flex-grow: 1;
+    position: relative;
   }
 }
 
