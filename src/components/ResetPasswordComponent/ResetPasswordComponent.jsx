@@ -4,9 +4,11 @@ import './ResetPasswordComponent.scss'
 import '../../global/Container.scss'
 import { Title, BlackButton, CustomInput } from "../index";
 import { NavLink } from "react-router-dom";
+import {validate} from "../validator";
 
 export default function ResetPasswordComponent({onSubmit}) {
     const [email, setEmail] = useState('')
+    const [errors, setErrors] = useState({})
 
     const changeEmail = (e) => {
         setEmail(e.target.value)
@@ -26,9 +28,22 @@ export default function ResetPasswordComponent({onSubmit}) {
                              label='Email'
                              placeholder='Enter your email'
                              onChange={changeEmail}
+                             error={errors.email}
+                             onFocusOut={(e) => {
+                                 const result = validate('email', e.target.value)
+                                 setErrors({ ...errors, email: result.message })
+                             }}
                 />
                 <BlackButton title='send a password reset link'
-                             onClick={() => onSubmit(email)}
+                             onClick={() => {
+                                 const emailError = validate('email', email)
+                                 if (!emailError.ok) {
+                                     return setErrors({
+                                         email: emailError.message
+                                     })
+                                 }
+                                 return onSubmit(email)
+                             }}
                 />
                 <NavLink className='ResetPassword-Link' to='/login'>Back to login</NavLink>
             </div>

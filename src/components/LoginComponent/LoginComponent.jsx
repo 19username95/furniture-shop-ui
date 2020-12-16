@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 
-import { capitalize } from "../../utils/capitalize";
+import {validate} from "../validator";
 import './LoginComponent.scss'
 import '../../global/Container.scss'
 import {
@@ -11,15 +11,6 @@ import {
 } from "../index";
 import showPasswordIcon from '../../assets/icons/ic_eye.svg'
 import hidePasswordIcon from '../../assets/icons/ic_eye_slash.svg'
-
-const regexp = {
-    email: new RegExp('^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$'),
-    password: new RegExp('^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$')
-}
-const regexpError = {
-    email: 'Please specify the email in the next format: example@domain.com.',
-    password: 'Should contain minimum eight characters, at least one letter and one number.'
-}
 
 export default function LoginComponent({goToSignUp}) {
     const history = useHistory()
@@ -35,23 +26,6 @@ export default function LoginComponent({goToSignUp}) {
 
     const changePassword = (e) => {
         setPassword(e.target.value)
-    }
-
-    const validate = (fieldName, value) => {
-        if (!value || !value.length) {
-            return {
-                ok: false,
-                message: `${capitalize(fieldName)} should not be empty. ${regexpError[fieldName]}`
-            }
-        }
-        if (!regexp[fieldName].test(value)) {
-            return {
-                ok: false,
-                message: `Wrong ${fieldName} format. ${regexpError[fieldName]}`
-            }
-        }
-
-        return { ok: true }
     }
 
     return (

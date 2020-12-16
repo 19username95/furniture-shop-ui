@@ -25,7 +25,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
 
     function loadMore() {
         const skip = products.length
-        const limit = 12
+        const limit = 4
 
         loadMoreProducts({ categoryId, sortType, skip, limit })
     }
