@@ -9,7 +9,7 @@ import '../../global/Container.scss'
 
 export default function CartComponent({items, removeItem, increaseQuantity, reduceQuantity, onSubmit}) {
     return (
-        <div className='Cart Container'>
+        <div className='Cart'>
             <div className='Cart-FullOrder'>
                 {items.map(({ product, count }) => (
                     <div className='Cart-Product' key={product.id}>
