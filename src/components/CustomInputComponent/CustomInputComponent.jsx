@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import './CustomInputComponent.scss'
 
 export default function CustomInputComponent({ label, labelHint, link, linkText, placeholder, type='text',
-                                                 value, onChange }) {
+                                                 value, onChange, onFocusOut, error }) {
     return (
         <div className='CustomInput'>
             <div className='CustomInput-Container'>
@@ -21,7 +21,9 @@ export default function CustomInputComponent({ label, labelHint, link, linkText,
                    placeholder={placeholder}
                    value={value}
                    onChange={onChange}
+                   onBlur={onFocusOut}
             />
+            {error ? <div className='CustomInput-Error'>{error}</div> : null}
         </div>
     )
 }

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 
+import { capitalize } from "../../utils/capitalize";
 import './LoginComponent.scss'
 import '../../global/Container.scss'
 import {
@@ -8,20 +10,21 @@ import {
     CustomInput
 } from "../index";
 
+const regexp = {
+    email: new RegExp('^[a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$'),
+    password: new RegExp('^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$')
+}
+const regexpError = {
+    email: 'Please specify the email in the next format: example@domain.com.',
+    password: 'Should contain minimum eight characters, at least one letter and one number.'
+}
+
 export default function LoginComponent({goToSignUp}) {
+    const history = useHistory()
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-    /*
-    const setters = {
-        setEmail,
-        setPassword
-    }
-
-    const changeField = (fieldName) => (e) => {
-        return setters[`set${fieldName}`](e.target.value)
-    }
-    */
+    const [errors, setErrors] = useState({})
 
     const changeEmail = (e) => {
         setEmail(e.target.value)
@@ -29,6 +32,23 @@ export default function LoginComponent({goToSignUp}) {
 
     const changePassword = (e) => {
         setPassword(e.target.value)
+    }
+
+    const validate = (fieldName, value) => {
+        if (!value || !value.length) {
+            return {
+                ok: false,
+                message: `${capitalize(fieldName)} should not be empty. ${regexpError[fieldName]}`
+            }
+        }
+        if (!regexp[fieldName].test(value)) {
+            return {
+                ok: false,
+                message: `Wrong ${fieldName} format. ${regexpError[fieldName]}`
+            }
+        }
+
+        return { ok: true }
     }
 
     return (
@@ -40,8 +60,12 @@ export default function LoginComponent({goToSignUp}) {
                                  label='Email'
                                  placeholder='Enter your email'
                                  value={email}
-                        // onChange={changeField('Email')}
                                  onChange={changeEmail}
+                                 error={errors.email}
+                                 onFocusOut={(e) => {
+                                     const result = validate('email', e.target.value)
+                                     setErrors({ ...errors, email: result.message })
+                                 }}
                     />
                     <CustomInput className='LoginPage-FormInput'
                                  label='Password'
@@ -49,16 +73,32 @@ export default function LoginComponent({goToSignUp}) {
                                  link='/reset-password'
                                  linkText='Forgotten your password?'
                                  value={password}
-                        // onChange={changeField('Password')}
                                  onChange={changePassword}
+                                 error={errors.password}
+                                 onFocusOut={(e) => {
+                                     const result = validate('password', e.target.value)
+                                     setErrors({ ...errors, password: result.message })
+                                 }}
                     />
                 </form>
                 <div>
                     <div>Don't have an account?</div>
                     <div onClick={goToSignUp}>Create an account</div>
                 </div>
-                <BlackButton title='login'
-                             link='/' />
+                <BlackButton
+                    title='login'
+                    onClick={() => {
+                        const emailError = validate('email', email)
+                        const passwordError = validate('password', password)
+                        if (!emailError.ok || !passwordError.ok) {
+                            return setErrors({
+                                email: emailError.message,
+                                password: passwordError.message
+                            })
+                        }
+                        return history.push('/')
+                    }}
+                />
             </div>
         </div>
     )

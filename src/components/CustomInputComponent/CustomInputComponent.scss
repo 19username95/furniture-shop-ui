@@ -7,6 +7,11 @@
     box-sizing: border-box;
   }
 
+  .CustomInput-Error {
+    color: red;
+    font-size: 0.75rem;
+  }
+
   .CustomInput-Container {
     display: flex;
     justify-content: space-between;
