@@ -90,7 +90,6 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
         { showPopUp ?
             <div className='Navigation-CartPopUpContainer'>
                 <CartPopUp items={cartItems}
-                           closePopUp={() => setShowPopUp(false)}
                            onMouseLeave={()=>setShowPopUp(false)} />
             </div>
             :null }

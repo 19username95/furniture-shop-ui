@@ -4,7 +4,7 @@ import "./CartPopUpComponent.scss"
 import { API_URL } from "../../global/constants"
 import { BlackButton } from "../index"
 
-function CartPopUpComponent ({items, closePopUp, onMouseLeave}) {
+function CartPopUpComponent ({items, onMouseLeave}) {
     return (
         <div className='CartPopUp' onMouseLeave={onMouseLeave}>
             <div className='CartPopUp-ProductsContainer'>
@@ -28,7 +28,7 @@ function CartPopUpComponent ({items, closePopUp, onMouseLeave}) {
                 }
             </div>
             <div className='CartPopUp-ButtonContainer'>
-                <BlackButton className='CartPopUp-Button' title='go to checkout' link='/cart' onClick={closePopUp}/>
+                <BlackButton className='CartPopUp-Button' title='go to checkout' link='/cart' />
             </div>
         </div>
     )
