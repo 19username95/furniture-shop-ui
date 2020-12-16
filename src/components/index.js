@@ -1,6 +1,6 @@
 import NavigationComponent from "./NavigationComponent/NavigationComponent"
 import WhiteButtonComponent from "./WhiteButtonComponent/WhiteButtonComponent"
-import AuthTitleComponent from "./AuthTitleComponent/AuthTitleComponent"
+import TitleComponent from "./TitleComponent/TitleComponent"
 import CustomInputComponent from "./CustomInputComponent/CustomInputComponent"
 import LoaderComponent from "./LoaderComponent/LoaderComponent"
 import BlackButtonComponent from "./BlackButtonComponent/BlackButtonComponent"
@@ -17,7 +17,7 @@ import CustomSelectComponent from "./CustomSelectComponent/CustomSelectComponent
 
 export const Navigation = NavigationComponent
 export const WhiteButton = WhiteButtonComponent
-export const AuthTitle = AuthTitleComponent
+export const Title = TitleComponent
 export const CustomInput = CustomInputComponent
 export const Loader = LoaderComponent
 export const BlackButton = BlackButtonComponent

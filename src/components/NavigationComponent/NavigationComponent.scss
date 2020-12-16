@@ -3,7 +3,7 @@
 .Navigation {
   top: 0;
   width: 100%;
-  height: 50px;
+  height: 65px;
   border-bottom: 1px solid $light-grey;
   position: fixed;
   background-color: $white;
@@ -12,7 +12,7 @@
   .Navigation-Container {
     width: 100%;
     max-width: 1024px;
-    height: 50px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +24,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      .Navigation-Logo {
+        align-self: center;
+      }
     }
 
     .Navigation-List {

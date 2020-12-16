@@ -64,10 +64,7 @@ function HomePage({ products, fetchProducts, categories, fetchCategories }) {
                 </div>
             </section>
             <section className='ProductsView'>
-                <div className='ProductsView-SortContainer'>
-
-                </div>
-                <div className='ProductsView-AllProducts'>
+                <div className='ProductsView-Wrapper'>
                     <GoodsPage />
                 </div>
             </section>

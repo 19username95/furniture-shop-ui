@@ -32,7 +32,8 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                 <NavLink className='Navigation-LogoLink'
                          to="/"
                          exact >
-                    <img alt='morgan' src={logoImage}/>
+                    <img className='Navigation-Logo'
+                         alt='morgan' src={logoImage} />
                 </NavLink>
                 <ul className='Navigation-List'>
                     {

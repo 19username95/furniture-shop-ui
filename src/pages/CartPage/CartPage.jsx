@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {connect} from "react-redux"
 import {
     Cart,
-    AuthTitle,
+    Title,
     BlackButton,
     WhiteButton
 } from "../../components"
@@ -41,7 +41,7 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
         return (
             <div className='SuccessOrderWrapper'>
                 <div className='SuccessOrder'>
-                    <AuthTitle>THANK YOU!</AuthTitle>
+                    <Title>THANK YOU!</Title>
                     <div className='SuccessOrder-Container Container'>
                         <img className='SuccessOrder-Image' alt='' src={imageBulbOn}/>
                         <div className='SuccessOrder-Title'>
@@ -76,7 +76,7 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
                 onSubmit={sendOrder}
             />
             : <div className='EmptyCart Container'>
-                <AuthTitle>BASKET</AuthTitle>
+                <Title>BASKET</Title>
                 <div className='EmptyCart-Container'>
                     <img className='EmptyCart-Image' alt='' src={imageBulb}/>
                     <div className='EmptyCart-Text'>Your basket is empty</div>
