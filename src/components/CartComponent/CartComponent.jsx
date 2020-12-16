@@ -6,6 +6,7 @@ import {
 import {pricePrettifier} from "../../utils/pricePrettifier"
 import './CartComponent.scss'
 import '../../global/Container.scss'
+import {NavLink} from "react-router-dom";
 
 export default function CartComponent({items, removeItem, increaseQuantity, reduceQuantity, onSubmit}) {
     return (
@@ -36,7 +37,10 @@ export default function CartComponent({items, removeItem, increaseQuantity, redu
                                 </div>
                             </div>
                         ))}
-
+                        <div className='Cart-SummaryProduct'>
+                            <div className='Cart-SummaryProductName'>Express Delivery</div>
+                            <div className='Cart-SummaryProductPrice'>{pricePrettifier(10)}</div>
+                        </div>
                     </div>
                     <div className='Cart-SummaryTotalContainer'>
                         <span className='Cart-TotalTitle'>Estimated Total</span>
@@ -51,6 +55,7 @@ export default function CartComponent({items, removeItem, increaseQuantity, redu
                                  onClick={onSubmit} />
                 </div>
             </div>
+            <NavLink className='Cart-HomeLink' to='/'>Continue shopping</NavLink>
         </div>
     );
 }
