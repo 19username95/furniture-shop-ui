@@ -75,7 +75,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                      () => setShowPopUp(true)
                                      : null} />
                             <div className='Navigation-CartCount'>
-                                {cartItemsCount ? cartItemsCount : null}
+                                {cartItemsCount ? cartItemsCount : '0'}
                             </div>
                         </NavLink>
                     </li>
