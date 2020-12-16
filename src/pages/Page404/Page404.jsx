@@ -10,7 +10,9 @@ export default function Page404() {
     return (
         <div className='Page404'>
             <div className="Page404-Container Container">
-                <img className='Page404-image404' alt='' src={image404}/>
+                <img className='Page404-image404'
+                     draggable={false}
+                     alt='' src={image404} />
                 <div className='Page404-Sorry'>
                     Sorry, we can't find this page
                 </div>

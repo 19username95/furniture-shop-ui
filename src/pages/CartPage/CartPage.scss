@@ -1,0 +1,91 @@
+@import "../../global/Constants";
+.EmptyCartWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .EmptyCart {
+    flex-grow: 1;
+    max-width: 368px;
+    position: relative;
+    text-align: center;
+  }
+
+  .EmptyCart-Container {
+    //max-width: 320px;
+    text-align: center;
+    font-size: 0.875em;
+    //margin: 0 auto;
+
+    .EmptyCart-Image {
+      padding-bottom: 3%;
+    }
+
+    .EmptyCart-Text {
+      padding-bottom: 10%;
+    }
+
+    .EmptyCart-BlackButtonWrapper {
+      height: 42px;
+    }
+  }
+}
+
+.SuccessOrderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  .SuccessOrder {
+    flex-grow: 1;
+    max-width: 368px;
+    position: relative;
+    text-align: center;
+
+
+    .SuccessOrder-Container {
+      .SuccessOrder-Image {
+
+      }
+
+      .SuccessOrder-Title {
+
+      }
+
+      .SuccessOrder-Subtitle {
+
+      }
+
+      .SuccessOrder-Info {
+        .SuccessOrder-OrderNumber {
+
+        }
+
+        .SuccessOrder-OrderDate {
+
+        }
+      }
+
+      .SuccessOrder-Button {
+
+      }
+    }
+  }
+}
+
+.CartWrapper {
+  display: flex;
+  width: 100%;
+  .CartContainer {
+    flex-grow: 1;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .EmptyCart {
+    font-size: 0.75em;
+  }
+}

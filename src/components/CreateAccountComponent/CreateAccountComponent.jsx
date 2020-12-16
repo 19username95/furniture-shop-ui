@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import './CreateAccountComponent.scss'
 import '../../global/Container.scss'
 import {
-    AuthTitle,
+    Title,
     BlackButton,
     CustomInput
 } from "../index";
@@ -11,7 +11,7 @@ import {
 export default function CreateAccountComponent({ goToSignIn }) {
     return (
         <div>
-            <AuthTitle>CREATE AN ACCOUNT</AuthTitle>
+            <Title>CREATE AN ACCOUNT</Title>
             <form>
 
             </form>

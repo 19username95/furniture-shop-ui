@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import './LoginComponent.scss'
 import '../../global/Container.scss'
 import {
-    AuthTitle,
+    Title,
     BlackButton,
     CustomInput
 } from "../index";
@@ -33,8 +33,8 @@ export default function LoginComponent({goToSignUp}) {
 
     return (
         <div className='LoginPage'>
-            <AuthTitle>login</AuthTitle>
             <div className='LoginPage-Container Container'>
+                <Title>login</Title>
                 <form className='LoginPage-Form'>
                     <CustomInput className='LoginPage-FormInput'
                                  label='Email'
@@ -58,8 +58,7 @@ export default function LoginComponent({goToSignUp}) {
                     <div onClick={goToSignUp}>Create an account</div>
                 </div>
                 <BlackButton title='login'
-                             link='/'
-                             onClick={() => console.log(email)} />
+                             link='/' />
             </div>
         </div>
     )

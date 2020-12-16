@@ -2,14 +2,15 @@ import React from "react"
 
 import './ResetPasswordSuccessComponent.scss'
 import '../../global/Container.scss'
-import { AuthTitle } from "../index";
+import { Title } from "../index";
 
 export default function ResetPasswordSuccessComponent({ email }) {
     return (
         <div className='ResetPasswordSuccess'>
-            <AuthTitle>YOUR LINK HAS BEEN SENT</AuthTitle>
+            <Title>YOUR LINK HAS BEEN SENT</Title>
             <div className='ResetPasswordSuccess-Container Container'>
-                <img className='ResetPasswordSuccess-Image' alt=''/>
+                <img className='ResetPasswordSuccess-Image' alt=''
+                     draggable={false} />
                 <div className='RResetPasswordSuccess-Text'>
                     We have sent a password reset email to your address:
                 </div>

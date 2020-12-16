@@ -2,7 +2,7 @@ import React, {useState} from "react"
 
 import './ResetPasswordComponent.scss'
 import '../../global/Container.scss'
-import { AuthTitle, BlackButton, CustomInput } from "../index";
+import { Title, BlackButton, CustomInput } from "../index";
 import { NavLink } from "react-router-dom";
 
 export default function ResetPasswordComponent({onSubmit}) {
@@ -14,7 +14,7 @@ export default function ResetPasswordComponent({onSubmit}) {
 
     return (
         <div className='ResetPassword'>
-            <AuthTitle>RESET YOUR PASSWORD</AuthTitle>
+            <Title>RESET YOUR PASSWORD</Title>
             <div className='ResetPassword-Container Container'>
                 <p className='ResetPassword-Text'>
                     Enter the email address for your Morgan account and we’ll send a single-use password reset link.
