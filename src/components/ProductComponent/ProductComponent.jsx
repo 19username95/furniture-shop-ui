@@ -21,9 +21,12 @@ function ProductComponent({ product, addToCart, removeItem, isInCart }) {
 
     return (
         <div className='Product'>
-            <img className='Product-Image' alt='' src={API_URL + product.image} />
+            <img className='Product-Image'
+                 alt='' src={API_URL + product.image}
+                 draggable={false} />
             <button className='Product-Button' onClick={() => changeProductState(product)}>
-                <img alt='' src={isInCart ? icon_remove : icon_add}/>
+                <img alt='' src={isInCart ? icon_remove : icon_add}
+                     draggable={false} />
             </button>
             <div className='Product-Info'>
                 <div className='Product-Name'>{product.name}</div>

@@ -50,6 +50,10 @@
     letter-spacing: 0.01em;
     margin: 2% auto 0;
   }
+
+  .Products-LoadMore:focus {
+    outline: none;
+  }
 }
 
 @media screen and (max-width: $max-mobile-breakpoint) {

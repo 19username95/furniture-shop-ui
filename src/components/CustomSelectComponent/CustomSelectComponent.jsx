@@ -20,7 +20,8 @@ export default function CustomSelectComponent({options, onChange}) {
                 <div className='Dropdown-Header'
                      onClick={toggling}>
                     {selectedOption.title || options[0].title}
-                    <img className='Dropdown-Arrow' alt='' src={arrow}/>
+                    <img className='Dropdown-Arrow' draggable={false}
+                         alt='' src={arrow} />
                 </div>
                 {isOpen && (
                     <div className='Dropdown-ListContainer'>
@@ -31,7 +32,7 @@ export default function CustomSelectComponent({options, onChange}) {
                                     key={option.value}>
                                     {option.title}
                                     {option.value === selectedOption.value ?
-                                        <img alt='' src={checkmark}/>
+                                        <img alt='' src={checkmark} draggable={false} />
                                         : null}
                                 </li>
                             ))}

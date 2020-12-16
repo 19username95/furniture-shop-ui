@@ -11,6 +11,9 @@ body {
 
 html {
   -ms-overflow-style: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 html::-webkit-scrollbar {

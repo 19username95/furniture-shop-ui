@@ -31,7 +31,6 @@
           width: 100%;
           height: auto;
           align-self: end;
-          user-select: none;
         }
       }
 
@@ -39,7 +38,6 @@
         grid-column: 2;
         display: grid;
         grid-template-rows: 50% auto;
-        user-select: none;
 
         .CartPopUp-ProductName {
           font-size: 0.75em;

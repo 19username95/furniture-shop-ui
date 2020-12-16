@@ -47,8 +47,6 @@
         .CartItem-QuantityLabel {
           font-size: 0.75em;
           color: $grey;
-          -moz-user-select: none;
-          user-select: none;
         }
 
         .CartItem-QuantityManager {
@@ -69,8 +67,6 @@
           .CartItem-Quantity {
             width: 100%;
             border: 1px solid $light-grey;
-            -moz-user-select: none;
-            user-select: none;
           }
 
           .CartItem-IncreaseQuantity {
@@ -117,8 +113,6 @@
         align-self: end;
         justify-self: end;
         font-size: 1em;
-        -moz-user-select: none;
-        user-select: none;
       }
     }
   }

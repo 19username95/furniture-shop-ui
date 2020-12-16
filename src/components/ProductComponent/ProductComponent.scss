@@ -18,6 +18,7 @@
     align-self: start;
     padding: 0;
     display: flex;
+    cursor: pointer;
   }
   .Product-Button:hover {
     background: transparent;
@@ -40,7 +41,9 @@
 
 
     .Product-Name {
-
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
     }
 
     .Product-Price {

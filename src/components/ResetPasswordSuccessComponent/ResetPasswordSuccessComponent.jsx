@@ -9,7 +9,8 @@ export default function ResetPasswordSuccessComponent({ email }) {
         <div className='ResetPasswordSuccess'>
             <Title>YOUR LINK HAS BEEN SENT</Title>
             <div className='ResetPasswordSuccess-Container Container'>
-                <img className='ResetPasswordSuccess-Image' alt=''/>
+                <img className='ResetPasswordSuccess-Image' alt=''
+                     draggable={false} />
                 <div className='RResetPasswordSuccess-Text'>
                     We have sent a password reset email to your address:
                 </div>

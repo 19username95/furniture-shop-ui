@@ -33,7 +33,8 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                          to="/"
                          exact >
                     <img className='Navigation-Logo'
-                         alt='morgan' src={logoImage} />
+                         alt='morgan' src={logoImage}
+                         draggable={false} />
                 </NavLink>
                 <ul className='Navigation-List'>
                     {
@@ -55,7 +56,8 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                  to="/search"
                                  activeClassName="Navigation-Link_Active"
                                  exact >
-                            <img src={searchIcon} alt={'Search'}/>
+                            <img src={searchIcon} alt={'Search'}
+                                 draggable={false} />
                         </NavLink>
                     </li>
                     <li className='Navigation-ListItem'>
@@ -63,7 +65,8 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                  to="/login"
                                  activeClassName="Navigation-Link_Active"
                                  exact >
-                            <img src={profileIcon} alt={'Profile'}/>
+                            <img src={profileIcon} alt={'Profile'}
+                                 draggable={false} />
                         </NavLink>
                     </li>
                     <li className='Navigation-ListItem'>
@@ -72,6 +75,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                  activeClassName="Navigation-Link_Active"
                                  exact >
                             <img src={cartIcon} alt={'Cart'}
+                                 draggable={false}
                                  onMouseEnter={ cartItemsCount > 0 ?
                                      () => setShowPopUp(true)
                                      : null} />

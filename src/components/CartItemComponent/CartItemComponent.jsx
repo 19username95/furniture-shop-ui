@@ -11,6 +11,7 @@ export default function CartItemComponent({ product, count, removeItem, increase
         <div className='CartItem'>
             <div className='CartItem-Container'>
                 <img className='CartItem-Image'
+                     draggable={false}
                      alt='' src={API_URL + product.image} />
                 <div className='CartItem-Main'>
                     <div className='CartItem-Info'>
@@ -23,16 +24,21 @@ export default function CartItemComponent({ product, count, removeItem, increase
                             <button className='CartItem-ReduceQuantity'
                                     disabled={count === 1}
                                     onClick={() => reduceQuantity(product.id)}>
-                                <img src={minusIcon} alt='-'/>
+                                <img src={minusIcon} alt='-'
+                                     draggable={false} />
                             </button>
                             <div className='CartItem-Quantity'>{count}</div>
                             <button className='CartItem-IncreaseQuantity'
                                     onClick={() => increaseQuantity(product.id)}>
-                                <img src={plusIcon} alt='+'/>
+                                <img src={plusIcon} alt='+'
+                                     draggable={false} />
                             </button>
                         </div>
                     </div>
-                    <img className='CartItem-Remove' onClick={() => removeItem(product.id)} alt='x' src={closeIcon}/>
+                    <img className='CartItem-Remove'
+                         onClick={() => removeItem(product.id)}
+                         alt='x' src={closeIcon}
+                         draggable={false} />
                     <div className='CartItem-Price'>
                         {pricePrettifier(product.price*count)}
                     </div>

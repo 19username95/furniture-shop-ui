@@ -14,7 +14,7 @@ function CartPopUpComponent ({items, closePopUp, onMouseLeave}) {
                             <div className='CartPopUp-ProductImageContainer'>
                                 <img className='CartPopUp-ProductImage'
                                      src={API_URL + product.image} alt=''
-                                     draggable={false}/>
+                                     draggable={false} />
                             </div>
                             <div className='CartPopUp-ProductInfo'>
                                 <div className='CartPopUp-ProductName'>{product.name}</div>
