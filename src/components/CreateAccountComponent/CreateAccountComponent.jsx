@@ -88,22 +88,24 @@ export default function CreateAccountComponent({goToSignIn}) {
                          and our
                         <a className='CreateAccountComponent-AgreeLink' href='/'> privacy notice </a>.
                     </div>
-                    <BlackButton
-                        title='CREATE AN ACCOUNT'
-                        onClick={() => {
-                            const fullNameError = validate('fullName', fullName)
-                            const emailError = validate('email', email)
-                            const passwordError = validate('password', password)
-                            if (!emailError.ok || !passwordError.ok) {
-                                return setErrors({
-                                    fullName: fullNameError.message,
-                                    email: emailError.message,
-                                    password: passwordError.message
-                                })
-                            }
-                            return history.push('/')
-                        }}
-                    />
+                    <div className="CreateAccountComponent-LoginButtonWrapper">
+                        <BlackButton
+                            title='CREATE AN ACCOUNT'
+                            onClick={() => {
+                                const fullNameError = validate('fullName', fullName)
+                                const emailError = validate('email', email)
+                                const passwordError = validate('password', password)
+                                if (!emailError.ok || !passwordError.ok) {
+                                    return setErrors({
+                                        fullName: fullNameError.message,
+                                        email: emailError.message,
+                                        password: passwordError.message
+                                    })
+                                }
+                                return history.push('/')
+                            }}
+                        />
+                    </div>
                     <div className='CreateAccountComponent-Login'>
                         <div className='CreateAccountComponent-LoginTitle'>
                             Have an account?
@@ -113,7 +115,9 @@ export default function CreateAccountComponent({goToSignIn}) {
                             Login
                         </div>
                     </div>
-                    <ThirdPartyLoginSection />
+                    <div className="CreateAccountComponent-SocialButtonsWrapper">
+                        <ThirdPartyLoginSection />
+                    </div>
                 </div>
             </div>
         </div>

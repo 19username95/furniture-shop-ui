@@ -16,7 +16,7 @@ export default function CustomInputComponent({ label, labelHint, link, linkText,
                     : null}
             </div>
             <div className='CustomInput-Container'>
-                <input className='CustomInput-Field'
+                <input className={error ? 'CustomInput-Field CustomInput-Field_error' : 'CustomInput-Field'}
                        type={type}
                        placeholder={placeholder}
                        value={value}

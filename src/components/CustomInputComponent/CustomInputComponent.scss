@@ -26,6 +26,7 @@
 
     .CustomInput-Link {
       color: $black;
+      font-size: 0.86em
     }
     .CustomInput-Link:active {
         color: $black;
@@ -41,7 +42,7 @@
     .CustomInput-Field {
       font-size: 0.875em;
       border: 1px solid $grey;
-      padding: 9px 12px;
+      padding: 10px 12px;
       font-weight: $normal-font-weight;
       font-family: $main-font-family;
       width: 100%;
@@ -53,6 +54,10 @@
 
     .CustomInput-Field:focus {
       outline: none;
+    }
+
+    .CustomInput-Field_error {
+      border-color: $red;
     }
 
     .CustomInput-Icon {

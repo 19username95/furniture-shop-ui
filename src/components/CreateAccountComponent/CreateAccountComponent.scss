@@ -26,6 +26,9 @@
         }
 
       }
+      .CreateAccountComponent-LoginButtonWrapper {
+        height: 46px;
+      }
       .CreateAccountComponent-Login {
         display: flex;
         justify-content: space-between;
@@ -37,7 +40,9 @@
           text-decoration: underline;
         }
       }
-
+      .CreateAccountComponent-SocialButtonsWrapper {
+        margin-top: 6%;
+      }
     }
   }
 }

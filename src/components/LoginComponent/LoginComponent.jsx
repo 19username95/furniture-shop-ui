@@ -87,7 +87,9 @@ export default function LoginComponent({goToSignUp}) {
                         Create an account
                     </div>
                 </div>
-                <ThirdPartyLoginSection />
+                <div className="LoginComponent-SocialButtonsWrapper">
+                    <ThirdPartyLoginSection className='LoginComponent-SocialButtons' />
+                </div>
             </div>
         </div>
     )

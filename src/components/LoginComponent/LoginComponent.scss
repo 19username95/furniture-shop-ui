@@ -13,6 +13,9 @@
       .LoginComponent-FormInput {
         margin: 7% 0;
       }
+      .LoginComponent-FormInput:last-child {
+        margin-bottom: 9%;
+      }
     }
 
     .LoginComponent-CreateAccount {
@@ -27,9 +30,13 @@
       }
     }
 
-    .LoginComponent-LoginButtonContainer {
+    .LoginComponent-LoginButtonWrapper {
       height: 46px;
       width: 100%;
+    }
+
+    .LoginComponent-SocialButtonsWrapper {
+      margin-top: 6%;
     }
   }
 }
