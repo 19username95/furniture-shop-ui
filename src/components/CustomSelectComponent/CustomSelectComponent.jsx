@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import './CustomSelectComponent.scss'
 import arrow from "../../assets/icons/ic_arrow.svg"
 import checkmark from "../../assets/icons/ic_checkmark.svg"
 
 export default function CustomSelectComponent({options, onChange}) {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(options[0]);
+    const [isOpen, setIsOpen] = useState(false)
+    const [selectedOption, setSelectedOption] = useState(options[0])
 
-    const toggling = () => setIsOpen(!isOpen);
+    const toggling = () => setIsOpen(!isOpen)
 
     const onOptionClicked = (option) => {
-        setSelectedOption(option);
-        setIsOpen(false);
+        setSelectedOption(option)
+        setIsOpen(false)
         onChange(option.value)
     };
 

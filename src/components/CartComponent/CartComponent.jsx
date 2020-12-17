@@ -1,12 +1,12 @@
 import React from 'react'
+import {NavLink} from "react-router-dom"
 import {
     BlackButton,
     CartItem
-} from "../index";
-import {pricePrettifier} from "../../utils/pricePrettifier"
+} from "../index"
+import { pricePrettifier } from "../../utils/pricePrettifier"
 import './CartComponent.scss'
 import '../../global/Container.scss'
-import {NavLink} from "react-router-dom";
 
 export default function CartComponent({items, removeItem, increaseQuantity, reduceQuantity, onSubmit}) {
     return (

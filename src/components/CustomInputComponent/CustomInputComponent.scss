@@ -7,10 +7,16 @@
     box-sizing: border-box;
   }
 
-  .CustomInput-Container {
+  .CustomInput-Error {
+    color: red;
+    font-size: 0.75rem;
+  }
+
+  .CustomInput-Header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 8px;
 
     .CustomInput-Label {
       .CustomInput-LabelHint {
@@ -20,28 +26,44 @@
 
     .CustomInput-Link {
       color: $black;
+      font-size: 0.86em
     }
     .CustomInput-Link:active {
         color: $black;
     }
   }
 
-  .CustomInput-Field {
-    font-size: 0.875em;
-    border: 1px solid $grey;
-    padding: 9px 12px;
-    font-weight: $normal-font-weight;
-    font-family: $main-font-family;
+  .CustomInput-Container {
+    position: relative;
+    display: flex;
     width: 100%;
-    margin: 8px 0;
-  }
+    align-items: center;
 
-  .CustomInput-Field::placeholder {
-    color: $grey;
-  }
+    .CustomInput-Field {
+      font-size: 0.875em;
+      border: 1px solid $grey;
+      padding: 10px 12px;
+      font-weight: $normal-font-weight;
+      font-family: $main-font-family;
+      width: 100%;
+    }
 
-  .CustomInput-Field:focus {
-    outline: none;
+    .CustomInput-Field::placeholder {
+      color: $grey;
+    }
+
+    .CustomInput-Field:focus {
+      outline: none;
+    }
+
+    .CustomInput-Field_error {
+      border-color: $red;
+    }
+
+    .CustomInput-Icon {
+      position: absolute;
+      right: 1rem;
+    }
   }
 }
 
@@ -51,7 +73,7 @@
 
     .CustomInput-Container {
       .CustomInput-Field {
-        font-size: 0.75em;
+        font-size: 0.875em;
       }
     }
   }

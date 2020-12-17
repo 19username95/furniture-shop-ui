@@ -3,8 +3,8 @@ import {
     productsFetched,
     loadMoreProducts,
     moreProductsLoaded,
-} from "../actions/products";
-import { fetch } from "../services/products";
+} from "../actions/products"
+import { fetch } from "../services/products"
 
 export const fetchProductsThunk = (options) => {
     return async (dispatch) => {
