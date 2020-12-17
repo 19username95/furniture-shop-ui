@@ -89,30 +89,21 @@
 
     .Navigation-Container {
       height: 48px;
-      width: 82vw;
-      display: grid;
-      grid-template-columns: 12% auto auto;
-      grid-template-rows: 48px calc(100vh - 48px);
-      padding: 0;
+      padding: 0 5%;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      .Navigation-BurgerButton, .Navigation-BurgerButton:focus {
-          outline: none;
+      .Navigation-BurgerContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-basis: 30%;
+
+        .Navigation-BurgerButton, .Navigation-BurgerButton:focus {
           display: block;
-          position: absolute;
-          top: 5px;
-          left: 5%;
-
-          margin: auto;
-        }
-
-      .Navigation-LogoLink {
-        grid-row: 1;
-        grid-column: 2;
-        display: grid;
-
-        .Navigation-Logo {
-          justify-self: center;
-          align-self: center;
+          outline: none;
         }
       }
 
@@ -134,30 +125,38 @@
         background-color: $white;
 
         .Navigation-ProductsTitle {
-          padding-top: 3%;
           color: $grey;
           text-transform: uppercase;
           font-size: 0.875em;
+          align-self: flex-start;
+          padding: 3% 20px;
         }
 
         .Navigation-ListItem {
+          width: 100%;
           padding-top: 1%;
           height: fit-content;
-          width: fit-content;
-          border-bottom: 1px solid #DEDEDE;
 
           .Navigation-Link {
+            justify-content: flex-start;
             height: fit-content;
+            padding: 0;
+            margin: 0 20px;
+            border-bottom: 1px solid #DEDEDE;
           }
         }
       }
 
+      .Navigation-MobileList {
+        justify-content: flex-end;
+        flex-basis: 30%;
+      }
+
       .Navigation-List:last-child {
-        grid-column: 3;
-        display: grid;
-        grid-template-columns: auto auto;
+        flex-grow: 0;
 
         .Navigation-ListItem {
+          margin-left: 20px;
 
           .Navigation-Link {
             padding: 0;

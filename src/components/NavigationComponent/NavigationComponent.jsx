@@ -51,13 +51,15 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
     <div className='Navigation'>
         <div className='Navigation-Components'>
             <div className='Navigation-Container'>
-                <HamburgerSqueeze buttonColor="transparent"
-                                  barColor="#121212"
-                                  toggleButton={() => setIsBurgerActive(!isBurgerActive)}
-                                  isActive={isBurgerActive}
-                                  className='Navigation-BurgerButton'
-                                  buttonWidth={'16'}
-                />
+                <div className='Navigation-BurgerContainer'>
+                    <HamburgerSqueeze buttonColor="transparent"
+                                      barColor="#121212"
+                                      toggleButton={() => setIsBurgerActive(!isBurgerActive)}
+                                      isActive={isBurgerActive}
+                                      className='Navigation-BurgerButton'
+                                      buttonWidth={'16'}
+                    />
+                </div>
                 <NavLink className='Navigation-LogoLink'
                          to="/"
                          exact >
@@ -87,7 +89,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                         </ul> :
                         null
                 }
-                <ul className='Navigation-List'>
+                <ul className='Navigation-List Navigation-MobileList'>
                     { isBurgerActive || isDesktop ?
                         <li className='Navigation-ListItem Navigation-ListItemSearch'>
                             <NavLink className='Navigation-Link'
