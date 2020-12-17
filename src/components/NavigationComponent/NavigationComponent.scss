@@ -79,3 +79,15 @@
     margin: auto;
   }
 }
+
+@media screen and (max-width: $max-tablet-breakpoint){
+  .Navigation {
+    .Navigation-Container {
+
+    }
+
+    .Navigation-CartPopUpContainer {
+      display: none;
+    }
+  }
+}
