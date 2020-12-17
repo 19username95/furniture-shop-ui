@@ -43,19 +43,21 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
                 <div className='SuccessOrder Container'>
                     <Title>THANK YOU!</Title>
                     <div className='SuccessOrder-Container'>
-                        <img className='SuccessOrder-Image' alt='' src={imageBulbOn}/>
+                        <div className='SuccessOrder-ImageContainer'>
+                            <img className='SuccessOrder-Image' alt='' src={imageBulbOn}/>
+                        </div>
                         <div className='SuccessOrder-Title'>
-
+                            Your ordering is completely successful
                         </div>
                         <div className='SuccessOrder-Subtitle'>
-
+                            We'll let you know when it ships and it headed your way.
                         </div>
-                        <div className='SuccessOrder-Info'>
-                            <div className='SuccessOrder-OrderNumber'>
-                                Order: <span className='SuccessOrder-Number'><b>0844253425</b></span>
+                        <div className='SuccessOrder-OrderInfo'>
+                            <div className='SuccessOrder-Info'>
+                                <span>Order:</span> <span className='SuccessOrder-InfoValue'><b>0844253425</b></span>
                             </div>
-                            <div className='SuccessOrder-OrderDate'>
-                                Date: <span className='SuccessOrder-Date'><b>{dateFormat(orderDate)}</b></span>
+                            <div className='SuccessOrder-Info'>
+                                <span>Date:</span> <span className='SuccessOrder-InfoValue'><b>{dateFormat(orderDate)}</b></span>
                             </div>
                         </div>
                         <Link to='/'>

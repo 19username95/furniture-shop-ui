@@ -40,31 +40,46 @@
 
   .SuccessOrder {
     flex-grow: 1;
-    max-width: 368px;
+    max-width: 370px;
+    min-width: 280px;
     position: relative;
-    text-align: center;
+    text-align: left;
 
 
     .SuccessOrder-Container {
-      .SuccessOrder-Image {
-
+      .SuccessOrder-ImageContainer {
+        display: flex;
+        width: 100%;
+        .SuccessOrder-Image {
+          margin: 0 auto;
+        }
       }
 
       .SuccessOrder-Title {
-
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 5%;
       }
 
       .SuccessOrder-Subtitle {
-
+        font-size: 0.75em;
+        letter-spacing: 0.01em;
+        margin: 2% 0;
       }
 
-      .SuccessOrder-Info {
-        .SuccessOrder-OrderNumber {
+      .SuccessOrder-OrderInfo {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75em;
+        letter-spacing: 0.01em;
+        margin: 2% 0 5%;
 
-        }
+        .SuccessOrder-Info {
+          color: $grey;
 
-        .SuccessOrder-OrderDate {
-
+          .SuccessOrder-InfoValue {
+            color: $black;
+          }
         }
       }
 

@@ -16,7 +16,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
     const [cartItemsCount, setCartItemsCount] = useState(0)
     const [showPopUp, setShowPopUp] = useState(false)
     const [isBurgerActive, setIsBurgerActive] = useState(false)
-    const [isDesktop, setIsDesktop] = useState(false)
+    const [isDesktop, setIsDesktop] = useState(true)
 
     const handler = (window) => {
         let width = window.target.screen.availWidth
@@ -33,8 +33,13 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
         if (!categories.length && !categoriesLoading) {
             fetchCategories()
         }
+
         setCartItemsCount(cartItems.reduce((sum, item) => sum + item.count, 0))
     }, [cartItems])
+
+    useEffect(() => {
+        setIsDesktop(window.innerWidth > 1023)
+    }, [])
 
     if (!categories || !categories.length) {
         return <Loader />
@@ -59,7 +64,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                          draggable={false} />
                 </NavLink>
                 {
-                    (isBurgerActive || isDesktop) ?
+                    ((isBurgerActive && !isDesktop) || isDesktop) ?
                     <ul className='Navigation-List Navigation-CategoriesList'>
                         { isBurgerActive || !isDesktop ?
                             <div className='Navigation-ProductsTitle'>Products</div>
@@ -69,7 +74,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                     <li className='Navigation-ListItem' key={category.id}>
                                 <NavLink className='Navigation-Link'
                                          onClick={() => {
-                                             setIsDesktop(false)
+                                             // setIsDesktop(false)
                                              setIsBurgerActive(false)
                                          }}
                                          to={`/goods/${category.alias}`}
