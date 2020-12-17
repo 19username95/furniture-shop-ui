@@ -1,0 +1,80 @@
+@import "../../global/Constants";
+.CustomInput{
+  color: $black;
+  font-size: 0.875em;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .CustomInput-Error {
+    color: red;
+    font-size: 0.75rem;
+  }
+
+  .CustomInput-Header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 8px;
+
+    .CustomInput-Label {
+      .CustomInput-LabelHint {
+        color: $grey;
+      }
+    }
+
+    .CustomInput-Link {
+      color: $black;
+      font-size: 0.86em
+    }
+    .CustomInput-Link:active {
+        color: $black;
+    }
+  }
+
+  .CustomInput-Container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    .CustomInput-Field {
+      font-size: 0.875em;
+      border: 1px solid $grey;
+      padding: 10px 12px;
+      font-weight: $normal-font-weight;
+      font-family: $main-font-family;
+      width: 100%;
+    }
+
+    .CustomInput-Field::placeholder {
+      color: $grey;
+    }
+
+    .CustomInput-Field:focus {
+      outline: none;
+    }
+
+    .CustomInput-Field_error {
+      border-color: $red;
+    }
+
+    .CustomInput-Icon {
+      position: absolute;
+      right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .CustomInput{
+    font-size: 0.75em;
+
+    .CustomInput-Container {
+      .CustomInput-Field {
+        font-size: 0.875em;
+      }
+    }
+  }
+}

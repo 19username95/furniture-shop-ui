@@ -1,0 +1,162 @@
+@import "../../global/Constants";
+
+.Cart {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-template-rows: 100%;
+  column-gap: 10%;
+
+  .Cart-FullOrder {
+    padding: 8px;
+
+    .Cart-Product {
+      padding-bottom: 4%;
+    }
+  }
+
+  .Cart-SummaryOrder {
+    justify-self: end;
+    width: 100%;
+    height: fit-content;
+    min-height: 180px;
+    border: 1px solid $light-grey;
+    padding: 8px;
+    display: grid;
+
+    .Cart-SummaryContainer {
+      font-size: 0.75em;
+
+      .Cart-SummaryTitle {
+        color: $grey;
+        padding-bottom: 5px ;
+      }
+
+      .Cart-SummaryProducts {
+        letter-spacing: 0.01em;
+        line-height: 183%;
+        border-bottom: 1px solid #6d6d6d1f;
+
+        .Cart-SummaryProduct {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          padding: 5px 0;
+        }
+      }
+
+      .Cart-SummaryTotalContainer {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .Cart-TotalTitle {
+          color: $grey;
+        }
+        .Cart-TotalSum {
+          font-size: 1.17em;
+        }
+      }
+    }
+
+    .Cart-CheckoutButtonContainer {
+      height: 34px;
+      width: 100%;
+      align-self: end;
+
+      .Cart-CheckoutButton {
+
+      }
+    }
+  }
+
+  .Cart-HomeLink {
+    display: none;
+  }
+}
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .Cart {
+    display: flex;
+    flex-direction: column;
+    .Cart-Container {
+      height: 100%;
+      overflow-y: scroll;
+    }
+    .Cart-FullOrder {
+      .CartItem {
+
+        .CartItem-Container {
+          grid-auto-columns: auto 70%;
+
+          .CartItem-Image {
+          }
+
+          .CartItem-Main {
+            .CartItem-Info {
+              * {
+                font-size: 0.625em;
+              }
+            }
+
+            .CartItem-QuantitySection {
+              .CartItem-QuantityLabel {
+                display: none;
+              }
+
+              .CartItem-QuantityManager {
+                grid-template-columns: 22px 22px 22px;
+                grid-template-rows: 22px;
+                column-gap: 2px;
+
+                .CartItem-Quantity {
+
+                }
+
+                .CartItem-IncreaseQuantity {
+
+                }
+
+                .CartItem-ReduceQuantity {
+
+                }
+              }
+            }
+
+            .CartItem-Remove {
+              width: 20px;
+              height: 20px;
+            }
+
+            .CartItem-Price {
+              font-size: 0.75em;
+            }
+          }
+        }
+      }
+    }
+
+    .Cart-SummaryOrder {
+      .Cart-SummaryContainer {
+        .Cart-SummaryTitle {
+          display: none;
+        }
+
+        .Cart-SummaryProducts {
+          .Cart-SummaryProduct {
+            display: none;
+          }
+
+          .Cart-SummaryProduct:last-child {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    .Cart-HomeLink {
+      display: block;
+      margin: 0 auto;
+      font-size: 0.625em;
+    }
+  }
+}

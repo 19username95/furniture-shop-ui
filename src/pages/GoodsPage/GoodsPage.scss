@@ -1,0 +1,72 @@
+//@import "../../global/Container";
+@import "../../global/Constants";
+
+.Products {
+  display: flex;
+  flex-direction: column;
+  .Products-Sort {
+    margin-top: 1.2%;
+    display: flex;
+    align-content: center;
+
+    .Products-SortTitle {
+      align-self: center;
+      padding: 3px 0;
+    }
+
+    .Products-Select{
+      border:none;
+      background-image:url('../../assets/icons/ic_arrow.svg');
+      background-repeat: no-repeat;
+      background-position: right center;
+      -webkit-appearance: none;
+      padding: 0.5% 1%;
+    }
+    .Products-Select:focus {
+      outline: none;
+    }
+  }
+  .Products-ProductGrid {
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-auto-rows: auto;
+
+    .Products-Product {
+
+    }
+  }
+  .Products-LoadMore {
+    width: fit-content;
+    height: fit-content;
+    padding: 1% 2%;
+    background-color: $white;
+    border: 1px solid $black;
+    font-weight: $normal-font-weight;
+    font-family: $main-font-family;
+    font-size: 0.875em;
+    letter-spacing: 0.01em;
+    margin: 5% auto 0;
+    cursor: pointer;
+  }
+
+  .Products-LoadMore:focus {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .Products {
+    .Products-Sort {
+
+    }
+    .Products-ProductGrid {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 8px;
+      row-gap: 8px;
+      grid-auto-rows: auto;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.Container {
+  max-width: 1100px;
+  margin: 73px auto 2%;
+  padding: 0 0 1% 0;
+}
+
+.Container:first-child {
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .Container {
+    padding: 3%;
+    margin: 48px auto 3%;
+  }
+}

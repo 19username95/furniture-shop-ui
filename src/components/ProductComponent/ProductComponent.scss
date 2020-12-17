@@ -1,0 +1,72 @@
+@import "../../global/Constants";
+
+.Product{
+  background-color: $product-background;
+  font-size: 0.875em;
+  display: grid;
+  grid-template-rows: auto 20%;
+  grid-template-columns: auto;
+  padding: 14px;
+
+  .Product-Button {
+    grid-row: 1;
+    grid-column: 1;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    justify-self: end;
+    align-self: start;
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+  }
+  .Product-Button:hover {
+    background: transparent;
+  }
+  .Product-Button:focus {
+    outline: none;
+  }
+
+  .Product-Image {
+    grid-row: 1;
+    grid-column: 1;
+    width: 100%;
+    align-self: center;
+  }
+
+  .Product-Info {
+    grid-row: 2;
+    background: transparent;
+    padding-top: 14px;
+
+
+    .Product-Name {
+      user-select: text;
+      -webkit-user-select: text;
+      -moz-user-select: text;
+    }
+
+    .Product-Price {
+
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .Product{
+    font-size: 0.875em;
+    grid-template-rows: auto 25%;
+    padding: 8px;
+
+    .Product-Info {
+      padding-top: 10px;
+
+      .Product-Name {
+      }
+
+      .Product-Price {
+
+      }
+    }
+  }
+}
