@@ -1,4 +1,5 @@
 import NavigationComponent from "./NavigationComponent/NavigationComponent"
+import BurgerMenuComponent from "./BurgerMenuComponent/BurgerMenuComponent"
 import WhiteButtonComponent from "./WhiteButtonComponent/WhiteButtonComponent"
 import TitleComponent from "./TitleComponent/TitleComponent"
 import CustomInputComponent from "./CustomInputComponent/CustomInputComponent"
@@ -17,6 +18,7 @@ import ProductComponent from "./ProductComponent/ProductComponent"
 import CustomSelectComponent from "./CustomSelectComponent/CustomSelectComponent"
 
 export const Navigation = NavigationComponent
+export const BurgerMenu = BurgerMenuComponent
 export const WhiteButton = WhiteButtonComponent
 export const Title = TitleComponent
 export const CustomInput = CustomInputComponent

@@ -17,10 +17,13 @@
         position: relative;
         overflow: hidden;
 
-        .CategoriesView-Image {
-          width: 100%;
-          transform: scale(1.1);
+        .CategoriesView-ImageLink {
+          overflow: hidden;
+          .CategoriesView-Image {
+            width: 100%;
+          }
         }
+
 
         .CategoriesView-Title {
           position: absolute;
@@ -41,7 +44,7 @@
         overflow: hidden;
 
         .CategoriesView-Image {
-          transform: scale(1.1);
+          transform: scale(1.2);
         }
 
       }

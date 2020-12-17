@@ -28,7 +28,7 @@ function HomePage({ products, fetchProducts, categories, fetchCategories }) {
                             return (
                                 <div className='CategoriesView-Category'
                                      key={category.id}>
-                                    <NavLink to={'/goods/' + category.alias}>
+                                    <NavLink to={'/goods/' + category.alias} className='CategoriesView-ImageLink'>
                                         <img className='CategoriesView-Image'
                                              draggable={false} alt=''
                                              src={API_URL + category.image}
