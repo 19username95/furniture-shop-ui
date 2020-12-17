@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/19username95/furniture-shop-ui/static/css/main.50ddb7bf.chunk.css",
+    "main.js": "/19username95/furniture-shop-ui/static/js/main.b5e4de20.chunk.js",
+    "main.js.map": "/19username95/furniture-shop-ui/static/js/main.b5e4de20.chunk.js.map",
+    "runtime-main.js": "/19username95/furniture-shop-ui/static/js/runtime-main.99427e05.js",
+    "runtime-main.js.map": "/19username95/furniture-shop-ui/static/js/runtime-main.99427e05.js.map",
+    "static/js/2.0754d9a5.chunk.js": "/19username95/furniture-shop-ui/static/js/2.0754d9a5.chunk.js",
+    "static/js/2.0754d9a5.chunk.js.map": "/19username95/furniture-shop-ui/static/js/2.0754d9a5.chunk.js.map",
+    "index.html": "/19username95/furniture-shop-ui/index.html",
+    "static/css/main.50ddb7bf.chunk.css.map": "/19username95/furniture-shop-ui/static/css/main.50ddb7bf.chunk.css.map",
+    "static/js/2.0754d9a5.chunk.js.LICENSE.txt": "/19username95/furniture-shop-ui/static/js/2.0754d9a5.chunk.js.LICENSE.txt",
+    "static/media/404.a7a9813e.svg": "/19username95/furniture-shop-ui/static/media/404.a7a9813e.svg",
+    "static/media/bulb.f7a94ce2.svg": "/19username95/furniture-shop-ui/static/media/bulb.f7a94ce2.svg",
+    "static/media/bulb_on.4ad3f9e3.svg": "/19username95/furniture-shop-ui/static/media/bulb_on.4ad3f9e3.svg",
+    "static/media/ic_add.48da61b8.svg": "/19username95/furniture-shop-ui/static/media/ic_add.48da61b8.svg",
+    "static/media/GoodsPage.scss": "/19username95/furniture-shop-ui/static/media/ic_arrow.f75fdba6.svg",
+    "static/media/ic_cart.ee523219.svg": "/19username95/furniture-shop-ui/static/media/ic_cart.ee523219.svg",
+    "static/media/ic_checkmark.a39917c0.svg": "/19username95/furniture-shop-ui/static/media/ic_checkmark.a39917c0.svg",
+    "static/media/ic_close.153c196f.svg": "/19username95/furniture-shop-ui/static/media/ic_close.153c196f.svg",
+    "static/media/ic_eye.91e1b31c.svg": "/19username95/furniture-shop-ui/static/media/ic_eye.91e1b31c.svg",
+    "static/media/ic_eye_slash.43b10575.svg": "/19username95/furniture-shop-ui/static/media/ic_eye_slash.43b10575.svg",
+    "static/media/ic_facebook.9e79e9ac.svg": "/19username95/furniture-shop-ui/static/media/ic_facebook.9e79e9ac.svg",
+    "static/media/ic_google.83dd97a9.svg": "/19username95/furniture-shop-ui/static/media/ic_google.83dd97a9.svg",
+    "static/media/ic_minus.59118f63.svg": "/19username95/furniture-shop-ui/static/media/ic_minus.59118f63.svg",
+    "static/media/ic_plus.27863962.svg": "/19username95/furniture-shop-ui/static/media/ic_plus.27863962.svg",
+    "static/media/ic_profile.8ecff396.svg": "/19username95/furniture-shop-ui/static/media/ic_profile.8ecff396.svg",
+    "static/media/ic_remove_dark.724aeaad.svg": "/19username95/furniture-shop-ui/static/media/ic_remove_dark.724aeaad.svg",
+    "static/media/ic_search.fdeb3c80.svg": "/19username95/furniture-shop-ui/static/media/ic_search.fdeb3c80.svg",
+    "static/media/logo.3e71f084.svg": "/19username95/furniture-shop-ui/static/media/logo.3e71f084.svg",
+    "static/media/paper_bird.2373597a.svg": "/19username95/furniture-shop-ui/static/media/paper_bird.2373597a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.99427e05.js",
+    "static/js/2.0754d9a5.chunk.js",
+    "static/css/main.50ddb7bf.chunk.css",
+    "static/js/main.b5e4de20.chunk.js"
+  ]
+}
