@@ -1,12 +1,12 @@
 import React, {useEffect} from "react";
 import {connect} from "react-redux";
-
-import './HomePage.scss'
-import '../../global/Container.scss'
+import {NavLink} from "react-router-dom";
 import Loader from "../../components/LoaderComponent/LoaderComponent";
 import {fetchCategoriesThunk} from "../../redux/thunks/categories";
 import GoodsPage from "../GoodsPage/GoodsPage";
 import {API_URL} from "../../global/constants";
+import './HomePage.scss'
+import '../../global/Container.scss'
 
 function HomePage({ products, fetchProducts, categories, fetchCategories }) {
     useEffect(() => {
@@ -28,10 +28,12 @@ function HomePage({ products, fetchProducts, categories, fetchCategories }) {
                             return (
                                 <div className='CategoriesView-Category'
                                      key={category.id}>
-                                    <img className='CategoriesView-Image'
-                                         draggable={false} alt=''
-                                         src={API_URL + category.image}
-                                    />
+                                    <NavLink to={'/goods/' + category.alias} className='CategoriesView-ImageLink'>
+                                        <img className='CategoriesView-Image'
+                                             draggable={false} alt=''
+                                             src={API_URL + category.image}
+                                        />
+                                    </NavLink>
                                     <div className='CategoriesView-Title'>{category.title}</div>
                                 </div>
                             )

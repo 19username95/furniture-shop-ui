@@ -1,13 +1,12 @@
 @import "../../global/Constants";
-
 .Navigation {
-  top: 0;
   width: 100%;
   height: 65px;
   border-bottom: 1px solid $light-grey;
   position: fixed;
-  background-color: $white;
+  top: 0;
   z-index: 3;
+  background-color: $white;
 
   .Navigation-Container {
     width: 100%;
@@ -18,6 +17,10 @@
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 1% 1% 1%;
+
+    .Navigation-BurgerButton  {
+      display: none;
+    }
 
     .Navigation-LogoLink {
       margin: 0 20px;
@@ -77,5 +80,104 @@
     justify-content: flex-end;
     max-width: 1024px;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: $max-tablet-breakpoint){
+  .Navigation {
+    height: 48px;
+
+    .Navigation-Container {
+      height: 48px;
+      width: 82vw;
+      display: grid;
+      grid-template-columns: 12% auto auto;
+      grid-template-rows: 48px calc(100vh - 48px);
+      padding: 0;
+
+      .Navigation-BurgerButton, .Navigation-BurgerButton:focus {
+          outline: none;
+          display: block;
+          position: absolute;
+          top: 5px;
+          left: 5%;
+
+          margin: auto;
+        }
+
+      .Navigation-LogoLink {
+        grid-row: 1;
+        grid-column: 2;
+        display: grid;
+
+        .Navigation-Logo {
+          justify-self: center;
+          align-self: center;
+        }
+      }
+
+      .Navigation-CategoriesList {
+        grid-row: 2;
+        grid-column: 1;
+        height: calc(100vh - 48px);
+        position: absolute;
+        top:0;
+        left: 0;
+        margin-top: 48px;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-content: start;
+        text-align: start;
+        background-color: $white;
+
+        .Navigation-ProductsTitle {
+          padding-top: 3%;
+          color: $grey;
+          text-transform: uppercase;
+          font-size: 0.875em;
+        }
+
+        .Navigation-ListItem {
+          padding-top: 1%;
+          height: fit-content;
+          width: fit-content;
+          border-bottom: 1px solid #DEDEDE;
+
+          .Navigation-Link {
+            height: fit-content;
+          }
+        }
+      }
+
+      .Navigation-List:last-child {
+        grid-column: 3;
+        display: grid;
+        grid-template-columns: auto auto;
+
+        .Navigation-ListItem {
+
+          .Navigation-Link {
+            padding: 0;
+            .Navigation-LinkIcon {
+            }
+          }
+          .Navigation-Link_Active {
+            border: none;
+          }
+        }
+
+        .Navigation-ListItemSearch {
+          position: absolute;
+          right: 5%;
+        }
+      }
+    }
+
+    .Navigation-CartPopUpContainer {
+      display: none;
+    }
   }
 }
