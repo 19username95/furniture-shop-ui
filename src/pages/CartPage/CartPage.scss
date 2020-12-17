@@ -7,7 +7,7 @@
 
   .EmptyCart {
     flex-grow: 1;
-    max-width: 368px;
+    max-width: 370px;
     position: relative;
     text-align: center;
   }
@@ -100,7 +100,17 @@
 }
 
 @media screen and (max-width: $max-mobile-breakpoint) {
-  .EmptyCart {
-    font-size: 0.75em;
+  .EmptyCartWrapper {
+    width: 90%;
+    padding: 5%;
+
+    .EmptyCart {
+      font-size: 0.75em;
+    }
+  }
+
+  .SuccessOrderWrapper {
+    width: 90%;
+    padding: 5%;
   }
 }

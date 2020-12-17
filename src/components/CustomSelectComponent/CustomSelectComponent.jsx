@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './CustomSelectComponent.scss'
-import arrow from "../../assets/icons/ic_arrow.svg"
-import checkmark from "../../assets/icons/ic_checkmark.svg"
+import arrowIcon from "../../assets/icons/ic_arrow.svg"
+import checkmarkIcon from "../../assets/icons/ic_checkmark.svg"
 
 export default function CustomSelectComponent({options, onChange}) {
     const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +21,7 @@ export default function CustomSelectComponent({options, onChange}) {
                      onClick={toggling}>
                     {selectedOption.title || options[0].title}
                     <img className='Dropdown-Arrow' draggable={false}
-                         alt='' src={arrow} />
+                         alt='' src={arrowIcon} />
                 </div>
                 {isOpen && (
                     <div className='Dropdown-ListContainer'>
@@ -32,7 +32,7 @@ export default function CustomSelectComponent({options, onChange}) {
                                     key={option.value}>
                                     {option.title}
                                     {option.value === selectedOption.value ?
-                                        <img alt='' src={checkmark} draggable={false} />
+                                        <img alt='' src={checkmarkIcon} draggable={false} />
                                         : null}
                                 </li>
                             ))}
