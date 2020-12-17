@@ -73,7 +73,7 @@ function CartPage ({items, removeItem, increaseQuantity, reduceQuantity, cleanCa
         <div className='CartWrapper'>
             <div className='CartContainer Container'>
                 <Title>BASKET</Title>
-                <Cart
+                <Cart className=''
                     items={items}
                     removeItem={removeItem}
                     increaseQuantity={increaseQuantity}

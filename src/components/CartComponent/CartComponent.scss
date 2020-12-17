@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: auto 25%;
   grid-template-rows: 100%;
-  column-gap: 10%;
+  column-gap: 7%;
 
   .Cart-FullOrder {
     padding: 8px;
@@ -77,13 +77,19 @@
 
 @media screen and (max-width: $max-mobile-breakpoint) {
   .Cart {
+    width: 90%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
+
     .Cart-Container {
       height: 100%;
       overflow-y: scroll;
     }
+
     .Cart-FullOrder {
+      padding: 8px 0;
+
       .CartItem {
 
         .CartItem-Container {
@@ -137,6 +143,9 @@
     }
 
     .Cart-SummaryOrder {
+      padding: 8px 0;
+      border: none;
+
       .Cart-SummaryContainer {
         .Cart-SummaryTitle {
           display: none;
@@ -151,6 +160,16 @@
             display: flex;
           }
         }
+      }
+    }
+
+    .Cart-CheckoutButtonContainer {
+      height: 34px;
+      width: 100%;
+      align-self: end;
+
+      .Cart-CheckoutButton {
+
       }
     }
 
