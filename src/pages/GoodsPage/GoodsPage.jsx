@@ -55,7 +55,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
                         )
                 }
             </div>
-            { hasMore ? <button className='Products-LoadMore' onClick={loadMore}>Show more</button> : null }
+            { hasMore ? <button className='Products-LoadMore' onClick={loadMore}><b>Show more</b></button> : null }
         </div>
     )
 }
