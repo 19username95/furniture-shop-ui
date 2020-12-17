@@ -28,31 +28,34 @@ export default function ResetPasswordComponent({onSubmit}) {
                     <p className='ResetPassword-Text'>
                         This link will expire after 24 hours.
                     </p>
-                    <CustomInput className='ResetPassword-Input'
-                                 label='Email'
-                                 placeholder='Enter your email'
-                                 onChange={changeEmail}
-                                 error={errors.email}
-                                 onFocusOut={(e) => {
-                                     const result = validate('email', e.target.value)
-                                     setErrors({ ...errors, email: result.message })
-                                 }}
-                    />
-                    <div className='ResetPassword-AgreeText'>
-                        By creating an account you agree to the website terms and conditions and our privacy notice.
+                    <div className='ResetPassword-InputContainer'>
+                        <CustomInput className='ResetPassword-Input'
+                                     label='Email'
+                                     placeholder='Enter your email'
+                                     onChange={changeEmail}
+                                     error={errors.email}
+                                     onFocusOut={(e) => {
+                                         const result = validate('email', e.target.value)
+                                         setErrors({ ...errors, email: result.message })
+                                     }}
+                        />
                     </div>
-                    <BlackButton title='send a password reset link'
-                                 onClick={() => {
-                                     const emailError = validate('email', email)
-                                     if (!emailError.ok) {
-                                         return setErrors({
-                                             email: emailError.message
-                                         })
-                                     }
-                                     return onSubmit(email)
-                                 }}
-                    />
-                    <NavLink className='ResetPassword-Link' to='/login'>Back to login</NavLink>
+                    <div className='ResetPassword-ButtonContainer'>
+                        <BlackButton title='send a password reset link'
+                                     onClick={() => {
+                                         const emailError = validate('email', email)
+                                         if (!emailError.ok) {
+                                             return setErrors({
+                                                 email: emailError.message
+                                             })
+                                         }
+                                         return onSubmit(email)
+                                     }}
+                        />
+                    </div>
+                    <div className="ResetPassword-LinkContainer">
+                        <NavLink className='ResetPassword-LoginLink' to='/login'>Back to login</NavLink>
+                    </div>
                 </div>
             </div>
         </div>
