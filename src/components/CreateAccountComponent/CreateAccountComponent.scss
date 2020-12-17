@@ -1,9 +1,50 @@
-.CreateAccountComponent {
+@import "../../global/Constants";
+
+.CreateAccountComponentWrapper {
   display: flex;
   width: 100%;
-  .CreateAccountComponent-Container {
+
+  .CreateAccountComponent {
     flex-grow: 1;
-    max-width: 320px;
-    position: relative;
+    max-width: 370px;
+
+    .CreateAccountComponent-Container {
+      .CreateAccountComponent-Form {
+        .CreateAccountComponent-FormInput {
+          margin: 7% 0;
+        }
+      }
+      .CreateAccountComponent-AgreeText {
+        font-size: 0.75em;
+        color: $grey;
+        margin: 0 0 3.5%;
+
+        .CreateAccountComponent-AgreeLink,
+        .CreateAccountComponent-AgreeLink:focus,
+        .CreateAccountComponent-AgreeLink:active {
+          color: $grey;
+        }
+
+      }
+      .CreateAccountComponent-Login {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75em;
+        letter-spacing: 0.01em;
+        margin: 5% 0 0;
+
+        .CreateAccountComponent-LoginLink {
+          text-decoration: underline;
+        }
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: $max-mobile-breakpoint){
+  .CreateAccountComponentWrapper {
+    width: 90%;
+    padding: 5%;
   }
 }

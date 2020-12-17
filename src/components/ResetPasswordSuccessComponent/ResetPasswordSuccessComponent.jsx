@@ -1,8 +1,7 @@
 import React from "react"
-
 import './ResetPasswordSuccessComponent.scss'
 import '../../global/Container.scss'
-import { Title } from "../index";
+import { Title } from "../index"
 
 export default function ResetPasswordSuccessComponent({ email }) {
     return (

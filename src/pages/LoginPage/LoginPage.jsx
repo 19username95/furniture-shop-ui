@@ -1,5 +1,8 @@
-import React, {useState} from "react";
-import {CreateAccount, Login} from "../../components";
+import React, { useState } from "react"
+import {
+    CreateAccount,
+    Login
+} from "../../components"
 
 export default function LoginPage() {
     const [mode, setMode] = useState('sign-in')

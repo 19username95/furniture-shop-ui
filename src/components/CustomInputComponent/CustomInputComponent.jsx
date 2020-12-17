@@ -1,6 +1,5 @@
-import React from "react";
-import {NavLink} from "react-router-dom";
-
+import React from "react"
+import { NavLink } from "react-router-dom"
 import './CustomInputComponent.scss'
 
 export default function CustomInputComponent({ label, labelHint, link, linkText, placeholder, type='text',

@@ -1,0 +1,47 @@
+@import "../../global/Constants";
+
+.Separator {
+  padding: 6% 0 0;
+  color: $light-grey;
+  font-size: 0.875em;
+  display: flex;
+  flex-direction: row;
+}
+.Separator:before, .Separator:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid $light-grey;
+  margin: auto;
+}
+.Separator:before {
+  margin-right: 8px
+}
+.Separator:after {
+  margin-left: 8px
+}
+
+.ThirdPartyLoginButtons {
+  padding: 3.7% 0;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+
+  .ThirdPartyLoginButtons-Button {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto auto;
+    font-size: 0.875em;
+
+    .ThirdPartyLoginButtons-ButtonImage {
+      justify-self: right;
+      display: flex;
+    }
+
+    .ThirdPartyLoginButtons-ButtonText {
+      justify-self: left;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import CustomInputComponent from "./CustomInputComponent/CustomInputComponent"
 import LoaderComponent from "./LoaderComponent/LoaderComponent"
 import BlackButtonComponent from "./BlackButtonComponent/BlackButtonComponent"
 import LoginComponent from "./LoginComponent/LoginComponent"
+import ThirdPartyLoginSectionComponent from "./ThirdPartyLoginSectionComponent/ThirdPartyLoginSectionComponent"
 import ResetPasswordComponent from "./ResetPasswordComponent/ResetPasswordComponent"
 import ResetPasswordSuccessComponent from "./ResetPasswordSuccessComponent/ResetPasswordSuccessComponent"
 import CreateAccountComponent from "./CreateAccountComponent/CreateAccountComponent"
@@ -22,6 +23,7 @@ export const CustomInput = CustomInputComponent
 export const Loader = LoaderComponent
 export const BlackButton = BlackButtonComponent
 export const Login = LoginComponent
+export const ThirdPartyLoginSection = ThirdPartyLoginSectionComponent
 export const ResetPassword = ResetPasswordComponent
 export const ResetPasswordSuccess = ResetPasswordSuccessComponent
 export const CreateAccount = CreateAccountComponent

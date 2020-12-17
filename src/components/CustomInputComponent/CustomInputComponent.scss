@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 8px;
 
     .CustomInput-Label {
       .CustomInput-LabelHint {
@@ -44,7 +45,6 @@
       font-weight: $normal-font-weight;
       font-family: $main-font-family;
       width: 100%;
-      margin: 8px 0;
     }
 
     .CustomInput-Field::placeholder {
@@ -68,7 +68,7 @@
 
     .CustomInput-Container {
       .CustomInput-Field {
-        font-size: 0.75em;
+        font-size: 0.875em;
       }
     }
   }

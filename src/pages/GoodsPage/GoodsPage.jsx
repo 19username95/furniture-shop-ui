@@ -1,11 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import { connect } from "react-redux";
-import { withRouter } from "react-router-dom";
-
+import React, { useEffect, useState } from 'react'
+import { connect } from "react-redux"
+import { withRouter } from "react-router-dom"
+import {
+    fetchProductsThunk,
+    loadMoreProductsThunk
+} from "../../redux/thunks/products"
+import {
+    Product,
+    CustomSelect
+} from "../../components"
 import './GoodsPage.scss'
 import '../../global/Container.scss'
-import { fetchProductsThunk, loadMoreProductsThunk } from "../../redux/thunks/products";
-import {Product, CustomSelect} from "../../components";
 
 function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasMore }) {
     const [sortType, setSortType] = useState('newness')

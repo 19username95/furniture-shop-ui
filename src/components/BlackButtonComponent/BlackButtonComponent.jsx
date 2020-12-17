@@ -1,7 +1,6 @@
-import React from "react";
-
+import React from "react"
+import {NavLink} from "react-router-dom"
 import './BlackButtonComponent.scss'
-import {NavLink} from "react-router-dom";
 
 export default function BlackButtonComponent({title, link, onClick}) {
     return link ?
