@@ -119,3 +119,56 @@
     }
   }
 }
+
+@media screen and (max-width: $max-mobile-breakpoint) {
+  .CartItem {
+
+    .CartItem-Container {
+      grid-auto-columns: auto 70%;
+
+      .CartItem-Image {
+      }
+
+      .CartItem-Main {
+        .CartItem-Info {
+          * {
+            font-size: 0.625em;
+          }
+        }
+
+        .CartItem-QuantitySection {
+          .CartItem-QuantityLabel {
+            display: none;
+          }
+
+          .CartItem-QuantityManager {
+            grid-template-columns: 22px 22px 22px;
+            grid-template-rows: 22px;
+            column-gap: 2px;
+
+            .CartItem-Quantity {
+
+            }
+
+            .CartItem-IncreaseQuantity {
+
+            }
+
+            .CartItem-ReduceQuantity {
+
+            }
+          }
+        }
+
+        .CartItem-Remove {
+          width: 20px;
+          height: 20px;
+        }
+
+        .CartItem-Price {
+          font-size: 0.75em;
+        }
+      }
+    }
+  }
+}
