@@ -95,11 +95,18 @@
   width: 100%;
   .CartContainer {
     flex-grow: 1;
-    position: relative;
   }
 }
 
 @media screen and (max-width: $max-mobile-breakpoint) {
+  .CartWrapper {
+    padding: 5%;
+    width: 90%;
+    .CartContainer {
+      margin-bottom: 0;
+    }
+  }
+
   .EmptyCartWrapper {
     width: 90%;
     padding: 5%;
