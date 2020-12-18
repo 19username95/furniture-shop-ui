@@ -75,11 +75,10 @@
 
 @media screen and (max-width: $max-mobile-breakpoint) {
   .HomePage {
-    padding-top: 1%;
-
     .CategoriesView {
       border-bottom: 1px solid $light-grey;
       padding-bottom: 7%;
+      padding-top: 3%;
 
       .CategoriesView-Container {
         display: grid;
@@ -167,10 +166,10 @@
   }
 }
 
-@media screen and (max-width: $max-tablet-breakpoint){
+@media screen and (max-width: 1150px){
   .HomePage {
     width: 92%;
-    padding: 0 4%;
+    padding: 0 3%;
   }
   .CategoriesView-Title {
     left: 7%;

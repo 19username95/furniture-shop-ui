@@ -54,3 +54,17 @@
     outline: none;
   }
 }
+
+@media screen and (max-width: $max-mobile-breakpoint){
+  .ThirdPartyLoginButtons {
+    .ThirdPartyLoginButtons-Button {
+      .ThirdPartyLoginButtons-ButtonImage {
+
+      }
+
+      .ThirdPartyLoginButtons-ButtonText {
+        display: none;
+      }
+    }
+  }
+}
