@@ -45,7 +45,11 @@ export default function CartComponent({items, removeItem, increaseQuantity, redu
                     <div className='Cart-SummaryTotalContainer'>
                         <span className='Cart-TotalTitle'>Estimated Total</span>
                         <span className='Cart-TotalSum'>
-                            {pricePrettifier(items.reduce((sum, item) => sum + (item.product.price * item.count), 0))}
+                            {
+                                pricePrettifier(items.reduce(
+                                    (sum, item) => sum + (item.product.price * item.count), 0) + 10
+                                )
+                            }
                         </span>
                     </div>
                 </div>
