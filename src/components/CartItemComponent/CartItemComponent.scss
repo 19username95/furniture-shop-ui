@@ -130,6 +130,7 @@
       }
 
       .CartItem-Main {
+        grid-template-columns: auto 30%;
         .CartItem-Info {
           * {
             font-size: 0.625em;
