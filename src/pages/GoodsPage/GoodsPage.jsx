@@ -7,8 +7,7 @@ import {
 } from "../../redux/thunks/products"
 import {
     Product,
-    CustomSelect,
-    Breadcrumbs
+    CustomSelect
 } from "../../components"
 import { SORT_TYPES } from "../../global/constants"
 import './GoodsPage.scss'
@@ -37,22 +36,16 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
         loadMoreProducts({ categoryId, sortType, skip, limit })
     }
 
-    const prevLinks = [
-        {
-            link: '/',
-            title: 'Products'
-        },
-    ]
+    // const prevLinks = [
+    //     {
+    //         link: '/',
+    //         title: 'Products'
+    //     },
+    // ]
 
     return (
         <div className='Container'>
-            {/*<Breadcrumbs className='Products-BreadcrumbsMobile' separator={'>'}>*/}
-            {/*    <NavLink to="/">*/}
-            {/*        Products*/}
-            {/*    </NavLink>*/}
-            {/*    <span>{categoryTitle}</span>*/}
-            {/*</Breadcrumbs>*/}
-            <Breadcrumbs currentCategoryTitle={categoryTitle} prevLinks={prevLinks} />
+            {/*<Breadcrumbs currentCategoryTitle={categoryTitle} prevLinks={prevLinks} />*/}
             <div className='Products'>
             <div className='Products-Sort'>
                 <span className='Products-SortTitle'>Sort by:</span>
