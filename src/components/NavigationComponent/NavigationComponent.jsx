@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom"
 import { connect } from 'react-redux'
 import {HamburgerSqueeze} from 'react-animated-burgers'
@@ -148,7 +148,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
 }
 
 export default connect(state => ({
-    categories: state.categories.list,
+    categories: [...state.categories.list].sort((a,b) => {return a.menuOrder-b.menuOrder}),
     categoriesLoading: state.categories.loading,
     cartItems: Object.values(state.cart.items)
 }), dispatch => ({

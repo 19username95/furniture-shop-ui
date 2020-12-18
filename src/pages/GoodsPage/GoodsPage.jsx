@@ -51,7 +51,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
                 {
                     products
                         .map(product =>
-                            <Product className='Products-Product' product={product} />
+                            <Product key={product.id} className='Products-Product' product={product} />
                         )
                 }
             </div>

@@ -145,7 +145,7 @@
           .CartItem-QuantityManager {
             grid-template-columns: 22px 22px 22px;
             grid-template-rows: 22px;
-            column-gap: 2px;
+            column-gap: 5px;
 
             .CartItem-Quantity {
 
@@ -162,8 +162,7 @@
         }
 
         .CartItem-Remove {
-          width: 20px;
-          height: 20px;
+
         }
 
         .CartItem-Price {
