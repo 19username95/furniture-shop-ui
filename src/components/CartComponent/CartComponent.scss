@@ -177,6 +177,11 @@
       display: block;
       margin: 0 auto;
       font-size: 0.625em;
+      color: $black;
+    }
+
+    .Cart-HomeLink:active {
+      color: $black;
     }
   }
 }
