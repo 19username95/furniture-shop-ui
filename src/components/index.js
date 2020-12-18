@@ -16,6 +16,7 @@ import CartItemComponent from "./CartItemComponent/CartItemComponent";
 import CartPopUpComponent from "./CartPopUpComponent/CartPopUpComponent"
 import ProductComponent from "./ProductComponent/ProductComponent"
 import CustomSelectComponent from "./CustomSelectComponent/CustomSelectComponent"
+import BreadcrumbsComponent from "./BreadcrumbsComponent/BreadcrumbsComponent"
 
 export const Navigation = NavigationComponent
 export const BurgerMenu = BurgerMenuComponent
@@ -35,3 +36,4 @@ export const CartItem = CartItemComponent
 export const CartPopUp = CartPopUpComponent
 export const Product = ProductComponent
 export const CustomSelect = CustomSelectComponent
+export const Breadcrumbs =BreadcrumbsComponent

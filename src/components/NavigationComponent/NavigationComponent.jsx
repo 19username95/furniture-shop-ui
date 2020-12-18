@@ -57,7 +57,7 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                                       toggleButton={() => setIsBurgerActive(!isBurgerActive)}
                                       isActive={isBurgerActive}
                                       className='Navigation-BurgerButton'
-                                      buttonWidth={'18'}
+                                      buttonWidth={'14'}
                     />
                 </div>
                 <NavLink className='Navigation-LogoLink'

@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from "react-redux"
-import { withRouter } from "react-router-dom"
+import { withRouter } from "react-router-dom";
 import {
     fetchProductsThunk,
     loadMoreProductsThunk
 } from "../../redux/thunks/products"
 import {
     Product,
-    CustomSelect
+    CustomSelect,
+    Breadcrumbs
 } from "../../components"
+import { SORT_TYPES } from "../../global/constants"
 import './GoodsPage.scss'
 import '../../global/Container.scss'
 
-function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasMore }) {
-    const [sortType, setSortType] = useState('newness')
+function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasMore, categoryTitle }) {
+    const [sortType, setSortType] = useState(SORT_TYPES[0].value)
 
     useEffect(() => {
         fetchProducts({ categoryId })
@@ -35,17 +37,26 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
         loadMoreProducts({ categoryId, sortType, skip, limit })
     }
 
-    const sortTypes = [
-        { title: 'Newness', value: 'newness' },
-        { title: 'Price high to low', value: 'high-to-low' },
-        { title: 'Price low to high', value: 'low-to-high' }
+    const prevLinks = [
+        {
+            link: '/',
+            title: 'Products'
+        },
     ]
 
     return (
-        <div className='Products Container'>
+        <div className='Container'>
+            {/*<Breadcrumbs className='Products-BreadcrumbsMobile' separator={'>'}>*/}
+            {/*    <NavLink to="/">*/}
+            {/*        Products*/}
+            {/*    </NavLink>*/}
+            {/*    <span>{categoryTitle}</span>*/}
+            {/*</Breadcrumbs>*/}
+            <Breadcrumbs currentCategoryTitle={categoryTitle} prevLinks={prevLinks} />
+            <div className='Products'>
             <div className='Products-Sort'>
                 <span className='Products-SortTitle'>Sort by:</span>
-                <CustomSelect options={sortTypes} onChange={onSort} />
+                <CustomSelect options={SORT_TYPES} onChange={onSort} />
             </div>
             <div className='Products-ProductGrid'>
                 {
@@ -57,6 +68,7 @@ function GoodsPage({ products, fetchProducts, loadMoreProducts, categoryId, hasM
             </div>
             { hasMore ? <button className='Products-LoadMore' onClick={loadMore}><b>Show more</b></button> : null }
         </div>
+        </div>
     )
 }
 
@@ -67,7 +79,8 @@ export default withRouter(connect((state, ownProps) => {
     return {
         products: state.products.list,
         hasMore: state.products.hasMore,
-        categoryId: category && category.id
+        categoryId: category && category.id,
+        categoryTitle: category && category.title
     }
 }, dispatch => ({
     fetchProducts: (options) => dispatch(fetchProductsThunk(options)),

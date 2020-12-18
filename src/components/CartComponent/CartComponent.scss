@@ -14,6 +14,10 @@
     }
   }
 
+  .Cart-FullOrder::-webkit-scrollbar {
+    display: none;
+  }
+
   .Cart-SummaryOrder-Container {
     .Cart-SummaryOrder {
       justify-self: end;
