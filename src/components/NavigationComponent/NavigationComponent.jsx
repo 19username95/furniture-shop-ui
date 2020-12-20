@@ -65,7 +65,8 @@ function NavigationComponent({ categories, cartItems, fetchCategories, categorie
                          exact >
                     <img className='Navigation-Logo'
                          alt='morgan' src={logoImage}
-                         draggable={false} />
+                         draggable={false}
+                         onClick={() => setIsBurgerActive(false)} />
                 </NavLink>
                 {
                     (isBurgerActive || isDesktop) ?
