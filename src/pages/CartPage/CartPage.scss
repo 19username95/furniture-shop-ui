@@ -102,7 +102,10 @@
   .CartWrapper {
     padding: 5%;
     width: 90%;
+    height: calc(100vh - 10vw);
+
     .CartContainer {
+      height: calc(100% - 48px);
       margin-bottom: 0;
     }
   }
@@ -112,7 +115,6 @@
     padding: 5%;
 
     .EmptyCart {
-      font-size: 0.75em;
     }
   }
 
