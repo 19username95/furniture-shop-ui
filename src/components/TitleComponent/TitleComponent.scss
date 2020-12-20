@@ -10,9 +10,7 @@
 }
 
 @media screen and (max-width: $max-tablet-breakpoint) {
-  font-size: 0.875em;
-}
-
-@media screen and (max-width: $max-mobile-breakpoint) {
-  font-size: 0.75em;
+  .Title {
+    font-size: 0.875em;
+  }
 }

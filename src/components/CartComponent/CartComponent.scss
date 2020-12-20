@@ -1,10 +1,8 @@
 @import "../../global/Constants";
 
 .Cart {
-  display: grid;
-  grid-template-columns: auto 25%;
-  grid-template-rows: 100%;
-  column-gap: 7%;
+  display: flex;
+  justify-content: space-between;
 
   .Cart-FullOrder {
     padding: 8px;
@@ -19,8 +17,8 @@
   }
 
   .Cart-SummaryOrder-Container {
+    margin-right: 2.5%;
     .Cart-SummaryOrder {
-      justify-self: end;
       width: 100%;
       height: fit-content;
       min-height: 180px;
